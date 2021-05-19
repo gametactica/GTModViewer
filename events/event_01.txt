@@ -1,0 +1,64 @@
+namespace = event_01
+
+country_event =
+{
+    id = event_01.1
+    title = event_01.1.t
+    desc = event_01.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        ai = no
+        NOT = { is_year = 1445 }
+    }
+
+    option =
+    {
+        name = event_01.1.a
+        
+        capital_scope = 
+        {
+            clr_province_flag = gt_player_capital
+            set_province_flag = gt_player_capital
+        }
+
+        if =
+        {    
+            limit = 
+            {
+                NOT = {tag = MNG}
+            }
+            capital_scope = 
+            {
+                area =
+                {
+                    clr_province_flag = gt_capital_province_@ROOT
+                    set_province_flag = gt_capital_province_@ROOT
+                }
+            }
+        }
+         
+
+        if =
+        {    
+            limit = 
+            {
+                tag = MNG
+            }
+
+            MNG = 
+            {
+                jiangsu_area = 
+                {
+                    clr_province_flag = gt_capital_province_@ROOT
+                    set_province_flag = gt_capital_province_@ROOT
+                }
+            }
+        }
+
+    }
+
+}

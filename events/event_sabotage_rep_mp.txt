@@ -1,0 +1,37 @@
+namespace = event_sabotage_rep_mp
+
+country_event =
+{
+    id = event_sabotage_rep_mp.1
+    title = event_sabotage_rep_mp.1.t
+    desc = event_sabotage_rep_mp.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+    mean_time_to_happen = {months = 3}
+
+    trigger =
+    {
+        has_country_modifier = reputation_sabotaged
+    }
+
+    option =
+    {
+        name = event_sabotage_rep_mp.1.a
+        every_country =
+        {
+            limit = 
+            {
+                ai = no
+            }
+
+            add_opinion = 
+            {
+                who = ROOT
+                modifier = GT_Reputation_Sabotaged
+            }
+            
+        }
+        
+    }
+}

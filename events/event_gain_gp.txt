@@ -1,0 +1,22 @@
+namespace = event_gain_gp
+
+country_event =
+{
+    id = event_gain_gp.1
+    title = event_gain_gp.1.t
+    desc = event_gain_gp.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    option =
+    {
+        name = event_gain_gp.1.a
+    }
+    
+}

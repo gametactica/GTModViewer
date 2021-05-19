@@ -1,0 +1,29 @@
+namespace = event_lose_land
+
+country_event =
+{
+    id = event_lose_land.1
+    title = event_lose_land.1.t
+    desc = event_lose_land.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    mean_time_to_happen = {months = 1}
+
+    trigger =
+    {
+        any_province = 
+        {
+            has_province_flag = gt_protected_area_alert_@ROOT
+        }
+    }
+
+    option =
+    {
+        name = event_lose_land.1.a
+        every_province = 
+        {
+            clr_province_flag = gt_protected_area_alert_@ROOT
+        }
+    }
+    
+}

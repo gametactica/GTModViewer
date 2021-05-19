@@ -1,0 +1,30 @@
+namespace = event_remove_reclaim
+
+country_event =
+{
+    id = event_remove_reclaim.1
+    title = event_remove_reclaim.1.t
+    desc = event_remove_reclaim.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    mean_time_to_happen = {days = 1}
+    hidden = yes
+
+    trigger =
+    {
+        any_owned_province = 
+        {
+            has_province_flag = can_reclaim_@ROOT
+        }
+    }
+
+    option =
+    {
+        name = event_remove_reclaim.1.a
+        every_owned_province = 
+        {
+            clr_province_flag = can_reclaim_@ROOT
+        }
+    }
+    
+}

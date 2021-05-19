@@ -1,0 +1,10 @@
+GT_Overlord_Investment = {
+yearly_army_professionalism = 0.03
+global_autonomy = -0.03
+ship_durability = 0.15
+build_cost = -0.15
+global_tax_income = 12
+advisor_cost = -0.1
+global_unrest = -10
+}
+

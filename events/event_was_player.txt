@@ -1,0 +1,29 @@
+namespace = event_was_player
+
+country_event =
+{
+    id = event_was_player.1
+    title = event_was_player.1.t
+    desc = event_was_player.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    mean_time_to_happen = {days = 1}
+    hidden = yes
+
+    trigger =
+    {
+        ai = no
+        NOT = {has_country_flag = gt_was_player}
+
+    }
+
+    option =
+    {
+        name = event_was_player.1.a
+
+        clr_country_flag = gt_was_player
+        set_country_flag = gt_was_player
+        
+    }
+    
+}

@@ -1,0 +1,52 @@
+namespace = event_GP4_opinion
+
+country_event =
+{
+    id = event_GP4_opinion.1
+    title = event_GP4_opinion.1.t
+    desc = event_GP4_opinion.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {years = 4} 
+
+    trigger =
+    {
+        is_great_power = yes 
+        NOT = {great_power_rank = 5}
+        great_power_rank = 4
+    }
+
+    immediate = 
+    {
+        hidden_effect = 
+        {
+            every_country =
+            {
+                limit = 
+                {
+                    OR = 
+                    {
+                        is_subject = no
+                        is_subject_of_type = tributary_state
+                    }
+                }
+
+                reverse_add_opinion = 
+                {
+                    who = ROOT
+                    modifier = GT_Superiority_Complex
+                }
+            }
+        }
+    }
+
+    option =
+    {
+        name = event_GP4_opinion.1.a
+
+        #if event breaks with ai, try code below
+        #ai_chance = {factor = 100}
+    }
+}

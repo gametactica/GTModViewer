@@ -1,0 +1,35 @@
+namespace = event_tag_switch
+
+country_event =
+{
+    id = event_tag_switch.1
+    title = event_tag_switch.1.t
+    desc = event_tag_switch.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    is_triggered_only = yes
+    hidden = yes
+
+    trigger =
+    {
+        always = yes
+    }
+
+    option =
+    {
+        name = event_tag_switch.1.a
+        
+        every_owned_province = 
+        {
+            limit = {has_province_flag = gt_player_capital }
+            area = 
+            {
+                clr_province_flag = gt_capital_province_@ROOT
+                set_province_flag = gt_capital_province_@ROOT
+            }
+
+        }
+        
+    }
+}
+    
