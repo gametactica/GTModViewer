@@ -8,3 +8,8 @@ advisor_cost = -0.1
 global_unrest = -10
 }
 
+GT_Rebel_Control = {
+global_unrest = -50
+max_absolutism = -50
+max_revolutionary_zeal= -50
+}

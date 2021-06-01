@@ -67,7 +67,7 @@ NDefines.NDiplomacy.GREAT_RELATIONS = 60
 --NCountry
 --NDefines.NCountry.
 NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 60
-NDefines.NCountry.MONARCH_MAX_SKILL = 7						-- Monarch skills will be chosen between MONARCH_MIN_SKILL and MONARCH_MAX_SKILL
+NDefines.NCountry.MONARCH_MAX_SKILL = 5						-- Monarch skills will be chosen between MONARCH_MIN_SKILL and MONARCH_MAX_SKILL
 NDefines.NCountry.DISINHERIT_PRESTIGE_HIT = -30
 NDefines.NCountry.EMBRACE_INSTITUTION_COST = 3				-- 2.5 per development (autonomy modified)
 NDefines.NCountry.STATE_MAINTENANCE_DISTANCE_FACTOR = 0.002	-- distance
@@ -80,6 +80,7 @@ NDefines.NCountry.MAX_ACTIVE_POLICIES = 12						-- how many active policies at o
 NDefines.NCountry.MINIMUM_POLICY_TIME = 3						-- how many years minimum for a policy
 NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 30		-- Minimum development required to promote the culture.
 NDefines.NCountry.NAT_FOCUS_YEARS = 20							-- years before you can change focus again
+NDefines.NCountry.PS_BOOST_STABILITY = 500
 NDefines.NCountry.PS_ARTILLERY_BARRAGE = 60
 NDefines.NCountry.PS_NAVAL_BARRAGE = 20
 NDefines.NCountry.PS_FORCE_MARCH = 3

@@ -4473,3 +4473,7 @@
  event_preferred_another.1.t:0 "An Underwhelming Alliance"
  event_preferred_another.1.d:0 "Whenever we propose a mutually beneficial international engagement with our ally we find them unable to commit.  They are perpetually hamstrung by their myriad, entangling alliances.  We've issued them an ultimatum; as expected, they have shown us neither promise nor favor."
  event_preferred_another.1.a:0 "We are losing faith in this alliance."
+ event_rebel_control.1.t:0 "End of Rebellions?"
+ event_rebel_control.1.d:0 "Though hesitant, the various rebelling factions warmed to the idea of negotiating an end to future rebellions.  Their terms are unwavering and clear; they know that they have the advantage and they are willing to press it if we don't issue considerable concessions.  Their terms will cost us dearly, but we will at least have 15 years to rebuild before worrying about rebels again."
+ event_rebel_control.1.a:0 "Meet their demands."
+ event_rebel_control.1.b:0 "Their terms are too steep."

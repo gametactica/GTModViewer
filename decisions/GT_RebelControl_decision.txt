@@ -1,0 +1,33 @@
+country_decisions = 
+{
+    GT_RebelControl_decision = 
+    {
+        major = yes
+        
+        potential = 
+        {
+            ai = no
+        }
+        
+        allow = 
+        {
+            custom_trigger_tooltip = 
+            {
+                tooltip = GT_RebelControl_decision_tooltip
+                
+
+            }
+        }
+        
+        effect = 
+        {
+			country_event = {id = event_rebel_control.1}
+            add_dip_power = -100
+            
+            hidden_effect = 
+            {
+
+            }
+        }
+    }
+}

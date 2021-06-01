@@ -732,7 +732,7 @@ quantity_ideas = {
 	}
 	mass_army = {
 		manpower_recovery_speed = 0.1
-		land_forcelimit = 8
+		land_forcelimit = 5
 		land_forcelimit_modifier = 0.1
 	}
 	garrison_conscription = {
@@ -1811,6 +1811,7 @@ hostile0 = {
 			ruler_has_personality = cruel_personality
 			ruler_has_personality = sinner_personality
 			}
+			primitives = no
 			}
 	
 	hostile1 = {
@@ -2039,7 +2040,7 @@ indigenous_ideas = {
 	category = MIL
 
 	bonus = {
-		global_institution_spread = 0.25
+		free_leader_pool = 1
 	}
 
 	trigger = {
