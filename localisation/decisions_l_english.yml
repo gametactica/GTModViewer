@@ -209,6 +209,3 @@
  GT_ProtectedArea_decision_title:0 "Seize Capital Lands"
  GT_ProtectedArea_decision_desc:0 "Your previous loyal subjects have notified you that, at your command, they will defect back to your banner."
  GT_ProtectedArea_tooltip:0 "Has lost capital area land."
- GT_RebelControl_decision_title:0 "Negotiate with all rebel factions."
- GT_RebelControl_decision_desc:0 "This period of instability within our nation must come to an end.  Call forth representatives for the rebel factions and inform them that their concessions will be granted."
- GT_RebelControl_decision_tooltip:0 "At Will."

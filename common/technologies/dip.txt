@@ -3,6 +3,8 @@ monarch_power = DIP
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	trade_efficiency = 0.2
+
+
 	yearly_corruption = -0.05
 }
 
@@ -14,6 +16,9 @@ technology = { #Early Ships
 	naval_morale			=	2.0
 	range					=	60
 	may_fabricate_claims = yes
+
+	enable = war_canoe
+
 
 }
 
@@ -35,6 +40,8 @@ technology = { #The Barque
 	trade_range				=	100
 	enable = cog
 	enable = galley
+	
+	naval_engagement_width = 20
 
 }
 
@@ -49,6 +56,7 @@ technology = { #The Early Carrack
 	range					= 	100
 	trade_efficiency 		= 	0.02
 	global_colonial_growth	= 	15
+	may_build_flagships = yes
 	
 	enable = early_carrack
 
@@ -62,7 +70,6 @@ technology = { #Marketplace
 	trade_range	= 10
 	marketplace = yes 
 	may_steal_maps = yes
-	
 	
 }
 
@@ -82,7 +89,7 @@ technology = { #Shipyards
 	year = 1479
 	
 	dock = yes
-	may_slander_merchants = yes
+	may_study_technology = yes
 
 }
 
@@ -93,6 +100,7 @@ technology = { #Naval Ambitions
 	naval_morale			= 0.3
 	range					= 115
 	impressment_offices 	= yes
+	naval_engagement_width = 10
 }
 
 technology  = { #Docks
@@ -116,7 +124,7 @@ technology = { #Carracks & Caravel
 	
 	enable = carrack
 	enable = caravel
-	may_study_technology = yes
+	may_slander_merchants = yes
 	
 }
 
@@ -138,7 +146,6 @@ technology = { #Wharf
 	range					= 	100
 
 	wharf = yes
-	may_sabotage_reputation = yes
 
 }
 
@@ -146,8 +153,9 @@ technology = { #Man of War
 	# Tech 12
 	year = 1557
 	naval_morale			=	0.4
-
+	may_sabotage_recruitment = yes
 	naval_battery = yes
+	naval_engagement_width = 15
 	
 }
 
@@ -157,7 +165,6 @@ technology = { #Chartered Companies
 	
 	trade_efficiency 		= 	0.02
 	enable = brig
-	may_sow_discontent = yes
 
 }
 
@@ -182,6 +189,7 @@ technology = { #The Galleon
 	
 	enable = galleon
 	enable = early_frigate
+	may_sow_discontent = yes
 
 }
 
@@ -191,7 +199,6 @@ technology = { #Development of Maritime Law
 	
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
-	may_corrupt_officials = yes
 
 }
 
@@ -205,6 +212,7 @@ technology = { #Merchantman
 	
 	trade_depot = yes 
 
+
 	enable = merchantman
 }
 
@@ -214,7 +222,8 @@ technology = { #Line of Battle
 	
 	enable = galiot
 	naval_morale			=	0.5
-	may_sabotage_recruitment = yes
+	may_sabotage_reputation = yes
+	naval_engagement_width = 10
 
 	
 }
@@ -249,7 +258,7 @@ technology = { #The Chebeck
 	
 
 	enable = chebeck
-	may_agitate_for_liberty = yes
+	may_corrupt_officials = yes
 
 }
 
@@ -266,6 +275,7 @@ technology = { #Limes
 	reduced_naval_attrition = yes
 	enable = twodecker
 	enable = trabakul
+	naval_engagement_width = 5
 }
 
 technology = { #Heavy Frigates
@@ -291,6 +301,8 @@ technology = { #The Archipelago Frigate
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
 	enable = archipelago_frigate
+	may_agitate_for_liberty = yes
+	naval_engagement_width = 10
 
 }
 
@@ -314,7 +326,6 @@ technology = { #The Eastindiaman
 	
 	enable = eastindiaman
 	enable = great_frigate
-	may_infiltrate_administration = yes
 }
 
 technology = { #Public Punishments
@@ -323,6 +334,7 @@ technology = { #Public Punishments
 	
 	naval_morale			=	0.5
 	naval_maintenance		= 	0.1
+	may_infiltrate_administration = yes
 
 }
 

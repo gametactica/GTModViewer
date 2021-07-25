@@ -2,24 +2,12 @@ the_combination_act = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovativeness_ideas
-		OR = {
-		has_idea_group = dynamic0
 		has_idea_group = aristocracy_ideas
-		has_idea_group = guer0   
-		has_idea_group = holy0
-		has_idea_group = horde0
-		}
+		has_idea_group = innovativeness_ideas
 	}
 	allow = {
-		full_idea_group = innovativeness_ideas
-		OR = {
-		full_idea_group = dynamic0
 		full_idea_group = aristocracy_ideas
-		full_idea_group = guer0   
-		full_idea_group = holy0
-		full_idea_group = horde0
-		}
+		full_idea_group = innovativeness_ideas
 	}
 	
 	production_efficiency = 0.20
@@ -53,24 +41,12 @@ the_court_of_wards_and_liveries = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = economic_ideas
-		OR = {
-		has_idea_group = dynamic0
 		has_idea_group = aristocracy_ideas
-		has_idea_group = guer0   
-		has_idea_group = holy0
-		has_idea_group = horde0
-		}
+		has_idea_group = economic_ideas
 	}
 	allow = {
-		full_idea_group = economic_ideas
-		OR = {
-		full_idea_group = dynamic0
 		full_idea_group = aristocracy_ideas
-		full_idea_group = guer0   
-		full_idea_group = holy0
-		full_idea_group = horde0
-		}
+		full_idea_group = economic_ideas
 	}
 		
 	global_tax_modifier = 0.10
@@ -128,7 +104,7 @@ formalized_measures = {
 	}	
 
 	global_tax_modifier = 0.10
-	republican_tradition = 0.1
+	republican_tradition = 0.2
 
 	ai_will_do = {
 		factor = 1
@@ -203,7 +179,7 @@ the_espionage_act = {
 		full_idea_group = spy_ideas
 	}
 
-	stability_cost_modifier = -0.25
+	liberty_desire = -10
 	diplomats = 1
 	
 	ai_will_do = {
@@ -215,25 +191,13 @@ manueline_architecture = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = expansion_ideas
-		OR = {
-		has_idea_group = dynamic0
 		has_idea_group = aristocracy_ideas
-		has_idea_group = guer0   
-		has_idea_group = holy0
-		has_idea_group = horde0
-		}
+		has_idea_group = expansion_ideas
 	}
 	
 	allow = {
-		full_idea_group = expansion_ideas
-		OR = {
-		full_idea_group = dynamic0
 		full_idea_group = aristocracy_ideas
-		full_idea_group = guer0   
-		full_idea_group = holy0
-		full_idea_group = horde0
-		}
+		full_idea_group = expansion_ideas
 	}
 
 	build_cost = -0.15
@@ -274,38 +238,12 @@ edict_of_resistance = {
 
 	potential = {
 		has_idea_group = defensive_ideas
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
+		has_idea_group = religious_ideas
 	}
 	
 	allow = {
 		full_idea_group = defensive_ideas
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
+		full_idea_group = religious_ideas
 	}
 
 
@@ -350,7 +288,7 @@ public_welfare_act = {
 	}
 
 	global_unrest = -1
-	stability_cost_modifier = -0.1
+	prestige_decay = -0.01
 
 	ai_will_do = {
 		factor = 1
@@ -403,39 +341,13 @@ enforce_religious_law = {
 	monarch_power = ADM
 
 	potential = {
+		has_idea_group = religious_ideas
 		has_idea_group = spy_ideas
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
 	}
 	
 	allow = {
+		full_idea_group = religious_ideas
 		full_idea_group = spy_ideas
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
 	}
 
 	global_missionary_strength = 0.01
@@ -470,43 +382,17 @@ the_tolerance_act = {
 	monarch_power = ADM
 
 	potential = {
+		has_idea_group = religious_ideas
 		has_idea_group = plutocracy_ideas
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
 	}
 	
 	allow = {
+		full_idea_group = religious_ideas
 		full_idea_group = plutocracy_ideas
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
 	}
 
 	tolerance_heretic = 2
-	rival_border_fort_maintenance = -0.4
+	rival_border_fort_maintenance = -0.5
 
 	ai_will_do = {
 		factor = 1
@@ -546,7 +432,7 @@ vassal_taxation_policy = {
 		full_idea_group = administrative_ideas
 	}
 
-	vassal_income = 0.25
+	vassal_income = 0.5
 
 	ai_will_do = {
 		factor = 1
@@ -586,6 +472,7 @@ the_pioneer_policy = {
 		full_idea_group = expansion_ideas
 	}
 
+	auto_explore_adjacent_to_colony = yes
 	colonist_placement_chance = 0.05
 	
 	ai_will_do = {
@@ -638,51 +525,13 @@ the_witchcraft_act = {
 	monarch_power = ADM
 
 	potential = {
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
-		OR = {
-		has_idea_group = dynamic0
+		has_idea_group = religious_ideas
 		has_idea_group = aristocracy_ideas
-		has_idea_group = guer0   
-		has_idea_group = holy0
-		has_idea_group = horde0
-		}
 	}
 	
 	allow = {
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
-		OR = {
-		full_idea_group = dynamic0
+		full_idea_group = religious_ideas
 		full_idea_group = aristocracy_ideas
-		full_idea_group = guer0   
-		full_idea_group = holy0
-		full_idea_group = horde0
-		}
 	}
 	
 	global_unrest = -1
@@ -756,39 +605,13 @@ the_education_act = {
 policy_of_calculate_delay = {
 	monarch_power = ADM
 	potential = {
+		has_idea_group = religious_ideas
 		has_idea_group = diplomatic_ideas
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
 	}
 	
 	allow = {
+		full_idea_group = religious_ideas
 		full_idea_group = diplomatic_ideas
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
 	}
 	
 	religious_unity = 0.2
@@ -896,7 +719,7 @@ vassal_obligations_act = {
 		full_idea_group = economic_ideas
 	}	
 	
-	vassal_income = 0.1
+	vassal_income = 0.25
 	vassal_forcelimit_bonus = 1
 	
 	ai_will_do = {
@@ -999,8 +822,8 @@ overseas_dominions = {
 		full_idea_group = expansion_ideas
 	}	
 	
-	vassal_income = 0.15
-	global_tariffs = 0.15
+	vassal_income = 0.25
+	global_tariffs = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -1032,24 +855,12 @@ enlightened_aristocracy = {
 	
 	potential = {
 		has_idea_group = humanist_ideas
-		OR = {
-		has_idea_group = dynamic0
 		has_idea_group = aristocracy_ideas
-		has_idea_group = guer0   
-		has_idea_group = holy0
-		has_idea_group = horde0
-		}
 	}
 	
 	allow = {
 		full_idea_group = humanist_ideas
-		OR = {
-		full_idea_group = dynamic0
 		full_idea_group = aristocracy_ideas
-		full_idea_group = guer0   
-		full_idea_group = holy0
-		full_idea_group = horde0
-		}
 	}	
 	
 	production_efficiency = 0.1
@@ -1115,7 +926,7 @@ the_liberation_act = {
 	}	
 	
 	global_unrest = -1
-	years_of_nationalism = -2
+	years_of_nationalism = -5
 	
 	ai_will_do = {
 		factor = 1
@@ -1173,7 +984,7 @@ the_transportation_act = {
 		full_idea_group = economic_ideas
 	}	
 	
-	global_trade_goods_size_modifier = 0.05
+	global_trade_goods_size_modifier = 0.1
 	production_efficiency = 0.1
 	
 	ai_will_do = {
@@ -1255,7 +1066,7 @@ supply_convoys = {
 		full_idea_group = expansion_ideas
 	}	
 	
-	global_ship_repair = 0.15
+	state_maintenance_modifier = -0.20
 	liberty_desire_from_subject_development = -0.2
 	
 	ai_will_do = {
@@ -1309,24 +1120,12 @@ the_licensing_of_the_press_act = {
 
 	potential = {
 		has_idea_group = administrative_ideas
-		OR = {
-		has_idea_group = dynamic0
 		has_idea_group = aristocracy_ideas
-		has_idea_group = guer0   
-		has_idea_group = holy0
-		has_idea_group = horde0
-		}
 	}
 	
 	allow = {
 		full_idea_group = administrative_ideas
-		OR = {
-		full_idea_group = dynamic0
 		full_idea_group = aristocracy_ideas
-		full_idea_group = guer0   
-		full_idea_group = holy0
-		full_idea_group = horde0
-		}
 	}
 
 	legitimacy = 1
@@ -1353,8 +1152,8 @@ the_dissolution_act = {
 		full_idea_group = economic_ideas
 	}
 	
-	global_tax_modifier = 0.1
-	global_autonomy = -0.03
+	global_tax_modifier = 0.15
+	global_autonomy = -0.05
 
 	ai_will_do = {
 		factor = 1
@@ -1606,7 +1405,7 @@ the_banking_system = {
 		full_idea_group = trade_ideas
 	}
 
-	interest = -0.2
+	interest = -0.25
 	trade_efficiency = 0.1
 
 
@@ -1636,39 +1435,13 @@ church_sponsored_guilds = {
 	monarch_power = ADM
 
 	potential = {
+		has_idea_group = religious_ideas
 		has_idea_group = trade_ideas
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
 	}
 	
 	allow = {
+		full_idea_group = religious_ideas
 		full_idea_group = trade_ideas
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
 	}
 	
 	global_trade_goods_size_modifier = 0.1
@@ -1703,43 +1476,17 @@ anti_heresy_act = {
 	monarch_power = ADM
 	
 	potential = {
+		has_idea_group = religious_ideas
 		has_idea_group = offensive_ideas
-		OR = {
-		has_idea_group = dynamic0
-		has_idea_group = Christian0
-		has_idea_group = Islam0
-		has_idea_group = Confucian0
-		has_idea_group = Buddhist0
-		has_idea_group = Tengri0
-		has_idea_group = Shinto0
-		has_idea_group = Jewish0
-		has_idea_group = Sikh0
-		has_idea_group = Pagan0
-		has_idea_group = Zor0
-		has_idea_group = Hindu0
-		}
 	}
 	
 	allow = {
+		full_idea_group = religious_ideas
 		full_idea_group = offensive_ideas
-		OR = {
-		full_idea_group = dynamic0
-		full_idea_group = Christian0
-		full_idea_group = Islam0
-		full_idea_group = Confucian0
-		full_idea_group = Buddhist0
-		full_idea_group = Tengri0
-		full_idea_group = Shinto0
-		full_idea_group = Jewish0
-		full_idea_group = Sikh0
-		full_idea_group = Pagan0
-		full_idea_group = Zor0
-		full_idea_group = Hindu0
-		}
 	}
 	
 	religious_unity = 0.2
-	global_heretic_missionary_strength = 0.02
+	global_heretic_missionary_strength = 0.03
 
 	ai_will_do = {
 		factor = 1
@@ -1763,5 +1510,396 @@ anti_heresy_act = {
 			factor = 1.5
 			NOT = { religious_unity = 0.2 }
 		}			
+	}
+}
+
+steppe_supplies_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = administrative_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = administrative_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+
+to_the_ground_policy = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = economic_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = economic_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	raze_power_gain = 0.33
+	horde_unity = 1
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+calming_the_tides_policy = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = humanist_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = humanist_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	global_unrest = -2
+	prestige = 0.5
+	
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
+	}
+}
+
+esprit_de_corps_policy = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	years_of_nationalism = -5
+	global_missionary_strength = 0.01
+	
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
+	}
+}
+
+otto_per_mille = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = economic_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = economic_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	core_creation = -0.05
+	years_of_nationalism = -5
+	
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
+	}
+}
+
+religious_spread_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = expansion_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = expansion_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	global_missionary_strength = 0.01
+	missionary_maintenance_cost = -0.15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.6 }
+		}			
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.2 }
+		}	
+	}
+}
+
+omnism_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = humanist_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = humanist_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	tolerance_heathen = 2
+	tolerance_heretic = 2
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.6 }
+		}			
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.2 }
+		}	
+	}
+}
+
+ora_et_labora_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = innovativeness_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = innovativeness_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	global_trade_goods_size_modifier = 0.05
+	land_attrition = -0.2
+	
+	ai_will_do = {
+		factor = 0.6
+		modifier = {
+			factor = 0
+			NOT = { production_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.5
+		}	
+	}
+}
+
+administration_of_sacred_land_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = administrative_ideas
+		has_idea_group = indigenous_ideas
+	}
+	
+	allow = {
+		full_idea_group = administrative_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	land_maintenance_modifier = -0.1
+	development_cost = -0.1
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { army_size_percentage = 0.9 }
+		}			
+		modifier = {
+			factor = 1.5
+			army_size_percentage = 1.1
+		}
+		modifier = {
+			factor = 1.5
+			army_size_percentage = 1.5
+		}
+		modifier = {
+			factor = 1.5
+			army_size_percentage = 2
+		}
+		modifier = {
+			factor = 1.5
+			army_size_percentage = 2.5
+		}		
+	}
+}
+
+shared_land_policy = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = expansion_ideas
+		has_idea_group = indigenous_ideas
+	}
+	
+	allow = {
+		full_idea_group = expansion_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	build_cost = -0.15
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_at_war = yes
+		}
+	}
+}
+
+disruptive_innovation_policy = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = innovativeness_ideas
+		has_idea_group = indigenous_ideas
+	}
+	
+	allow = {
+		full_idea_group = innovativeness_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	development_cost = -0.05
+	global_institution_spread = 0.2
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+ancestor_worship_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = indigenous_ideas
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	missionaries = 1
+	tolerance_own = 1
+
+	ai_will_do = {
+		factor = 1
 	}
 }
