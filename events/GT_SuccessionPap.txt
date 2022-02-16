@@ -1,0 +1,33 @@
+namespace = GT_SuccessionPap
+
+country_event =
+{
+    id = GT_SuccessionPap.1
+    title = GT_SuccessionPap.1.t
+    desc = GT_SuccessionPap.1.d
+    picture = POPE_PREACHING_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        government = theocracy
+		tag = PAP
+    }
+	
+	option = {
+		name = "GT_SuccessionPap.1.a"
+		trigger = {
+			is_papal_controller = yes
+			}
+			add_stability = 1
+		}
+	
+	option = {
+		name = "GT_SuccessionPap.1.b"
+		trigger = {
+			is_papal_controller = no
+		}
+			add_stability = -1
+	}
+}

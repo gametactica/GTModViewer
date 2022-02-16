@@ -21,23 +21,67 @@ country_event =
     {
         hidden_effect = 
         {
-            every_country =
-            {
-                limit = 
-                {
-                    OR = 
-                    {
-                        is_subject = no
-                        is_subject_of_type = tributary_state
-                    }
-                }
+			if = 
+			{
+				limit = { ai = no }
+				every_country =
+				{
+					limit = 
+					{
+						OR = 
+						{
+							is_subject = no
+							is_subject_of_type = tributary_state
+						}
+					}
 
-                reverse_add_opinion = 
-                {
-                    who = ROOT
-                    modifier = GT_Superiority_Complex
-                }
-            }
+					reverse_add_opinion = 
+					{
+						who = ROOT
+						modifier = GT_Superiority_Complex
+					}
+				}
+			}
+			if = 
+			{
+				limit = { 
+					ai = yes
+					is_emperor = yes
+				}
+				every_country =
+				{
+					limit = 
+					{
+						is_part_of_hre = no
+					}
+
+					reverse_add_opinion = 
+					{
+						who = ROOT
+						modifier = GT_Superiority_Complex
+					}
+				}
+			}
+			if = 
+			{
+				limit = { 
+					ai = yes
+					is_emperor = no
+				}
+				every_country =
+				{
+					limit = 
+					{
+						is_subject = no
+					}
+
+					reverse_add_opinion = 
+					{
+						who = ROOT
+						modifier = GT_Superiority_Complex
+					}
+				}
+			}
         }
     }
 

@@ -7,13 +7,18 @@ theocracy_mechanic = {
 	different_religion_group_acceptance = -50
 	religion = yes
 	heir = yes
+	can_customise_heir = no
 	basic_reform = yes # = invisible/does not take up a slot
 	valid_for_nation_designer = no
 
 	modifiers = {
 		brahmins_hindu_influence_modifier = 0.1
-		church_loyalty_modifier = 0.1
+		brahmins_muslim_influence_modifier = 0.1
+		brahmins_other_influence_modifier = 0.1
 		church_influence_modifier = 0.05
+		tolerance_own = 2
+		tolerance_heathen = -2
+		tolerance_heretic = -3
 	}
 }
 
@@ -28,7 +33,9 @@ leading_clergy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
-		global_tax_modifier = 0.05
+		institution_spread_from_true_faith = 0.15
+		governing_capacity = 30
+		church_influence_modifier = 0.05
 	}
 }
 
@@ -38,6 +45,8 @@ monastic_order_reform = {
 	}
 	modifiers = {
 		fort_maintenance_modifier = -0.2
+		prestige_per_development_from_conversion = 0.33
+		nobles_influence_modifier = 0.05
 	}
 	rulers_can_be_generals = yes
 	heirs_can_be_generals = yes
@@ -56,9 +65,9 @@ papacy_reform = {
 	}
 
 	modifiers = {
-		prestige_per_development_from_conversion = 0.33
-		tolerance_own = 1
-		church_influence_modifier = 0.2
+		ae_impact = -0.15
+		prestige = 0.5
+		church_influence_modifier = 0.15
 	}
 	valid_for_nation_designer = no
 	icon = "papacy"
@@ -80,7 +89,10 @@ internal_mission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		tolerance_own = 2
+		tolerance_own = 1
+		build_cost = -0.1
+		establish_order_cost = -0.5
+		church_influence_modifier = 0.05
 	}
 }
 
@@ -88,7 +100,10 @@ external_mission_reform = {
 	icon = "soldiers"
 	allow_normal_conversion = yes
 	modifiers = {
-		manpower_recovery_speed = 0.1
+		manpower_recovery_speed = 0.15
+		spy_offence = 0.1
+		land_forcelimit = 3
+		nobles_influence_modifier = 0.05
 	}
 }
 
@@ -105,6 +120,12 @@ mission_to_civilize_reform = {
 	modifiers = {
 		native_assimilation = 0.35
 		native_uprising_chance = -0.5
+		expel_minorities_cost = -0.25
+		papal_influence = 0.5
+		maratha_muslim_influence_modifier = 0.05
+		rajput_muslim_influence_modifier = 0.05
+		vaisyas_influence_modifier = 0.05
+		vaisyas_non_muslim_influence_modifier = 0.1
 	}
 }
 
@@ -125,6 +146,11 @@ mission_to_kill_pirates_reform = {
 		global_sailors_modifier = 0.2
 		naval_forcelimit_modifier = 0.25
 		capture_ship_chance = 0.33
+		flagship_cost = -0.5
+		maratha_muslim_loyalty_modifier = 0.05
+		rajput_muslim_loyalty_modifier = 0.05
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_non_muslim_loyalty_modifier = 0.1
 	}
 }
 
@@ -134,7 +160,9 @@ safeguard_holy_sites_reform = {
 	icon = "church"
 	allow_normal_conversion = yes
 	modifiers = {
-		prestige = 1
+		prestige = 0.50
+		defensiveness = 0.2
+		diplomatic_reputation = 1
 	}
 }
 
@@ -142,7 +170,10 @@ combat_heresy_reform = {
 	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	modifiers = {
-		land_morale = 0.1
+		global_heretic_missionary_strength = 0.02
+		enforce_religion_cost = -0.2
+		tolerance_heretic = -1
+		maratha_muslim_influence_modifier = -0.05
 	}
 }
 
@@ -150,7 +181,10 @@ expel_heathens_reform = {
 	icon = "landscape"
 	allow_normal_conversion = yes
 	modifiers = {
-		development_cost = -0.05
+		global_heathen_missionary_strength = 0.02
+		warscore_cost_vs_other_religion = -0.2
+		tolerance_heathen = -1
+		rajput_muslim_influence_modifier = -0.05
 	}
 }
 
@@ -165,7 +199,7 @@ kingdom_of_god_reform = {
 	}
 	modifiers = {
 		global_manpower_modifier = 0.1
-		prestige = 1
+		missionaries = 1
 		devotion = 1
 		appoint_cardinal_cost = -0.3
 		papal_influence_from_cardinals = 1.0
@@ -181,7 +215,8 @@ subservient_administrators_reform = {
 	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	modifiers = {
-		yearly_corruption = -0.1
+		yearly_corruption = -0.15
+		advisor_pool = 1
 	}
 }
 
@@ -189,7 +224,12 @@ religious_administrators_reform = {
 	icon = "paper_with_seal_3"
 	allow_normal_conversion = yes
 	modifiers = {
-		stability_cost_modifier = -0.1
+		stability_cost_modifier = -0.2
+		adm_advisor_cost = -0.25
+		brahmins_hindu_influence_modifier = 0.05
+		brahmins_muslim_influence_modifier = 0.05
+		brahmins_other_influence_modifier = 0.05
+		church_influence_modifier = 0.05
 	}
 }
 
@@ -197,12 +237,10 @@ pious_merchants_reform = {
 	icon = "merchant"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_trade_power = 0.05
-		maratha_muslim_influence_modifier = 0.1
-		rajput_muslim_influence_modifier = 0.1
+		merchants = 1
 		burghers_influence_modifier = 0.1
-		burghers_loyalty_modifier = 0.05
-		vaisyas_non_muslim_influence_modifier = 0.1
+		vaisyas_influence_modifier = 0.05
+		vaisyas_non_muslim_loyalty_modifier = 0.05
 	}
 }
 
@@ -210,13 +248,11 @@ loyal_nobility_reform = {
 	icon = "nobleman"
 	allow_normal_conversion = yes
 	modifiers = {
-		army_tradition = 0.25
-		nobles_influence_modifier = 0.1
-		maratha_exclusive_influence_modifier = 0.1
-		rajput_exclusive_influence_modifier = 0.1
-		nobles_loyalty_modifier = 0.05
-		maratha_exclusive_loyalty_modifier = 0.05
-		rajput_exclusive_loyalty_modifier = 0.05
+		army_tradition = 0.30
+		leader_cost = -0.10
+		nobles_influence_modifier = 0.05
+		maratha_exclusive_influence_modifier = 0.05
+		rajput_exclusive_influence_modifier = 0.05
 	}
 }
 
@@ -244,7 +280,8 @@ monastic_breweries_reform = {
 	icon = "monastic_breweries_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.15
+		tolerance_own = 1
 	}
 	effect = {
 		custom_tooltip = producing_wine_and_grain_tt
@@ -335,7 +372,10 @@ maintain_religious_head_reform = {
 	icon = "nobleman"
 	allow_normal_conversion = yes
 	modifiers = {
-		yearly_absolutism = 1
+		yearly_absolutism = 0.25
+		max_absolutism = 10
+		devotion = 0.25
+		church_loyalty_modifier = 0.1
 	}
 }
 
@@ -344,7 +384,15 @@ partial_secularisation_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		idea_cost = -0.1
-		global_institution_spread = 0.05
+		global_institution_spread = 0.1
+		years_of_nationalism = -5
+		church_influence_modifier = -0.05
+		burghers_influence_modifier = 0.05
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_non_muslim_loyalty_modifier = 0.05
+		brahmins_hindu_loyalty_modifier = -0.05
+		brahmins_muslim_loyalty_modifier = -0.05
+		brahmins_other_loyalty_modifier = -0.05
 	}
 }
 
@@ -360,6 +408,7 @@ battle_pope_reform = {
 	modifiers = {
 		manpower_in_true_faith_provinces = 0.10
 		leader_land_fire = 1
+		nobles_loyalty_modifier = 0.1
 	}
 	ai = {
 		factor = 3
@@ -374,6 +423,8 @@ conciliarism_reform = {
 	}
 	modifiers = {
 		appoint_cardinal_cost = -0.3
+		religious_unity = 0.15
+		diplomatic_reputation = 1
 	}
 	ai = {
 		factor = 3
@@ -434,8 +485,9 @@ clerical_commission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_unrest = -1
-		diplomatic_upkeep = 1	
+		accept_vassalization_reasons = 5
+		diplomatic_upkeep = 1
+		inflation_reduction = 0.1
 	}
 	
 	potential = {
@@ -460,7 +512,9 @@ divine_guidance_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = 20
+		devotion = 0.50
+		administrative_efficiency = 0.05
+		innovativeness_gain = 0.25
 	}
 	
 	potential = {
@@ -479,7 +533,9 @@ divine_guidance_reform = {
 theocratic_democracy_reform = {
 	icon = "assembly_hall"
 	modifiers = {
+		governing_capacity = 150
 		global_unrest = -1
+		advisor_pool = 1
 	}
 	
 	potential = {
@@ -540,7 +596,10 @@ regionally_elected_commanders = {
 	allow_normal_conversion = yes
 	fixed_rank = 0
 	modifiers = {
-		global_unrest = -1
+		leader_land_manuever = 1
+		defensiveness = 0.15
+		nobles_loyalty_modifier = 0.05
+		cossacks_influence_modifier = 0.1
 	}
 	
 	potential = {
@@ -602,8 +661,8 @@ monastic_elections_reform = {
 	allow_normal_conversion = yes
 	fixed_rank = 0
 	modifiers = {
-		stability_cost_modifier = -0.1
-		max_absolutism = 20
+		free_mil_policy = 1
+		church_loyalty_modifier = 0.1
 	}
 	
 	potential = {
@@ -624,6 +683,8 @@ monastic_elections_reform = {
 		allow = { has_dlc = "Res Publica" }
 		heir = no
 		election_on_death = yes
+		duration = 4
+		has_term_election = yes
 		states_general_mechanic = {
 			militarists = {
 				manpower_recovery_speed = 0.2
@@ -765,6 +826,7 @@ religious_harmony_reform = {
 	}
 	modifiers = {
 		num_accepted_cultures = 2
+		promote_culture_cost = -0.25
 	}
 	ai = {
 		factor = 0
@@ -782,8 +844,8 @@ organising_our_religion_reform = {
 	}
 	
 	modifiers = {
-		yearly_absolutism = 1
-		devotion = 1
+		manpower_in_true_faith_provinces= 0.20
+		reserves_organisation = 0.20
 	}
 	ai = {
 		factor = 3
@@ -806,7 +868,10 @@ religion_in_one_country_reform = {
 		}
 	}
 	modifiers = {
-		warscore_cost_vs_other_religion = -0.3
+		tolerance_own = 1
+		tolerance_heretic = -1	
+		tolerance_heathen = -1
+		discipline = 0.05
 	}
 	ai = {
 		factor = 3
@@ -833,7 +898,8 @@ religious_permanent_revolution_reform = {
 		custom_tooltip = world_crusade_tt
 	}
 	modifiers = {
-		enforce_religion_cost = -0.25
+		monthly_splendor = 1
+		rebel_support_efficiency = 0.3
 	}
 	ai = {
 		factor = 3
@@ -847,8 +913,11 @@ many_fingers_of_god_reform = {
 		has_idea_group = humanist_ideas
 	}
 	modifiers = {
-		tolerance_heretic = 2	
-		tolerance_heathen = 2
+		tolerance_own = -1
+		tolerance_heretic = 1	
+		tolerance_heathen = 1
+		religious_unity = 0.1
+		mercenary_manpower= 0.25
 	}
 	ai = {
 		factor = 3
@@ -866,7 +935,9 @@ priestly_autonomy_reform = {
 	}
 	
 	modifiers = {
-		governing_capacity = 250
+		global_unrest = -2
+		nobles_influence_modifier = -0.1
+		church_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 3
@@ -893,7 +964,7 @@ proclaim_religious_head_reform = {
 		}
 	}
 	modifiers = {
-		warscore_cost_vs_other_religion = -0.25
+		same_culture_advisor_cost = -0.2
 		diplomatic_reputation = 1
 	}
 	ai = {
@@ -911,8 +982,8 @@ all_under_tengri_reform = {
 		religion = tengri_pagan_reformed
 	}
 	modifiers = {
-		cavalry_power = 0.15
-		cav_to_inf_ratio = 0.25
+		cavalry_power = 0.2
+		horde_unity = 0.50
 	}
 	ai = {
 		factor = 3

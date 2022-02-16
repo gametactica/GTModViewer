@@ -1273,7 +1273,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = scientific_revolution
+		has_idea_group = innovativeness_ideas
 		NOT = {	has_country_modifier =  "mil_boost" }
 		NOT = {	has_country_modifier =  "adm_boost" }
 		NOT = {	has_country_modifier =  "dip_boost" }
@@ -1936,7 +1936,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = divine_supremacy
+		has_idea_group = religious_ideas
 	}
 	
 	mean_time_to_happen = {
@@ -4803,7 +4803,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = smithian_economics
+		has_idea_group = economic_ideas
 		NOT = { has_country_modifier = "production_improvements" }
 		NOT = { has_country_modifier = "production_stifled" }
 	}
@@ -5118,7 +5118,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea = quest_for_the_new_world
+		has_idea_group = exploration_ideas
 		num_of_colonies = 1
 		NOT = { has_country_modifier = colonial_enthusiasm }
 	}

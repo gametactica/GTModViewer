@@ -1,0 +1,31 @@
+namespace = event_AI_VASSAL+
+
+country_event =
+{
+    id = event_AI_VASSAL+.1
+    title = event_AI_VASSAL+.1.t
+    desc = event_AI_VASSAL+.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {months = 1} 
+
+    trigger =
+    {
+        vassal = 3
+        ai = yes
+		NOT = {has_country_flag = gt_was_player}
+    }
+
+    option =
+    {
+		add_country_modifier = { 
+			name = GT_AI_suzerain
+			duration = -1  
+			desc = AI_suzerain_TOOLTIP
+			#hidden = yes
+			}
+        
+    }
+}

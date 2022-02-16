@@ -160,16 +160,28 @@ public_road_act = {
 	
 	potential = {
 		has_idea_group = offensive_ideas
-		has_idea_group = trade_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = offensive_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	movement_speed = 0.10
-	trade_efficiency = 0.10
+	caravan_power = 0.10
 
 	ai_will_do = {
 		factor = 1
@@ -235,8 +247,7 @@ modern_siege_weapons = {
 		full_idea_group = offensive_ideas
 	}
 	
-	siege_ability = 0.1
-	leader_siege = 1
+	siege_ability = 0.2
 
 	ai_will_do = {
 		factor = 1
@@ -283,6 +294,7 @@ modern_firearm_techniques = {
 	}
 	
 	infantry_power = 0.1
+	global_unrest = -1
 
 	ai_will_do = {
 		factor = 1.2		
@@ -336,7 +348,7 @@ military_zeal_act = {
 	}
 	
 	land_morale = 0.05
-	siege_ability = 0.1
+	leader_siege = 1
 
 	ai_will_do = {
 		factor = 1
@@ -360,8 +372,8 @@ field_priests = {
 		full_idea_group = quantity_ideas
 	}
 
-	land_morale = 0.1
-	recover_army_morale_speed = 0.05
+	land_morale = 0.05
+	recover_army_morale_speed = 0.1
 	
 	ai_will_do = {
 		factor = 1.2
@@ -668,6 +680,7 @@ inspirational_leaders = {
 	}	
 	
 	leader_land_shock = 1
+	stability_cost_modifier = -0.1
 	
 	ai_will_do = {
 		factor = 1.2
@@ -716,8 +729,8 @@ the_preparation_act = {
 		full_idea_group = defensive_ideas
 	}	
 	
-	land_attrition = -0.25
-	war_exhaustion = -0.05
+	land_attrition = -0.2
+	war_exhaustion = -0.03
 	
 	ai_will_do = {
 		factor = 0.9
@@ -742,7 +755,7 @@ local_militias = {
 	}	
 	
 	war_exhaustion = -0.03
-	defensiveness = 0.1
+	defensiveness = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -763,7 +776,7 @@ foreign_conscription_centers = {
 	}	
 	
 	reinforce_cost_modifier = -0.20
-	advisor_pool = 1
+	mercenary_manpower= 0.25
 	
 	ai_will_do = {
 		factor = 1
@@ -804,7 +817,7 @@ guerilla_warfare = {
 	}	
 	
 	hostile_attrition = 1
-	global_garrison_growth = 0.1
+	infantry_shock = 1
 	
 	ai_will_do = {
 		factor = 0.8
@@ -823,7 +836,8 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.05
+	drill_gain_modifier = 0.25
+	fire_damage = 0.10
 	
 	ai_will_do = {
 		factor = 2
@@ -847,7 +861,8 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_power = 0.10
+	cavalry_power = 0.15
+	nobles_loyalty_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -902,6 +917,7 @@ nobles_in_navy_act = {
 	}
 
 	navy_tradition_decay = -0.01
+	flagship_cost = -0.25
 
 	ai_will_do = {
 		factor = 0.6
@@ -925,7 +941,8 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	global_manpower_modifier = 0.33
+	possible_condottieri = 5
+	yearly_army_professionalism = 0.005
 
 	ai_will_do = {
 		factor = 0.8
@@ -977,12 +994,24 @@ trade_kontor_network = {
 	monarch_power = MIL
 	potential = {
 		has_idea_group = plutocracy_ideas
-		has_idea_group = trade_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = plutocracy_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+				
 	}
 	
 	merchants = 1
@@ -1027,6 +1056,7 @@ deserteur_act = {
 	}
 
 	army_tradition_decay = -0.005
+	reserves_organisation = 0.10
 	
 	ai_will_do = {
 		factor = 0.75
@@ -1275,7 +1305,7 @@ psychological_warfare_policy = {
 	}
 
 	cavalry_flanking = 0.5
-	cavalry_power = 0.1
+	cavalry_power = 0.25
 
 	ai_will_do = {
 		factor = 1.0
@@ -1324,7 +1354,8 @@ my_word_is_my_bond_policy = {
 		full_idea_group = spy_ideas
 	}
 
-	siege_ability = 0.2
+	siege_ability = 0.1
+	garrison_size = 0.10
 
 	ai_will_do = {
 		factor = 1.0

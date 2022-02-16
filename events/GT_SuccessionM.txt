@@ -1,0 +1,63 @@
+namespace = GT_SuccessionM
+
+country_event =
+{
+    id = GT_SuccessionM.1
+    title = GT_SuccessionM.1.t
+    desc = GT_SuccessionM.1.d
+    picture = DEATH_OF_HEIR_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        government = monarchy
+		NOT = { has_reform = steppe_horde }
+		NOT = { tag = MAM }
+		NOT = { is_emperor_of_china = yes }
+    }
+	
+	option = {
+		name = "GT_SuccessionM.1.a"
+		trigger = {
+			legitimacy = 95
+			}
+			add_stability = 1
+		}
+	
+	option = {
+		name = "GT_SuccessionM.1.b"
+		trigger = {
+			legitimacy = 80
+			NOT = { legitimacy = 95 }
+			}
+			add_stability = 0
+		}
+	
+	option = {
+		name = "GT_SuccessionM.1.c"
+		trigger = {
+			legitimacy = 60
+			NOT = { legitimacy = 80 }
+			}
+			add_stability = -1
+		}
+	
+	option = {
+		name = "GT_SuccessionM.1.e"
+		trigger = {
+			legitimacy = 30
+			NOT = { legitimacy = 60 }
+			}
+			add_stability = -2
+		}
+	
+	option = {
+		name = "GT_SuccessionM.1.f"
+		trigger = {
+			legitimacy = 0
+			NOT = { legitimacy = 30 }
+			}
+			add_stability = -3
+		}
+	}
