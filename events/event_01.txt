@@ -5,7 +5,7 @@ country_event =
     id = event_01.1
     title = event_01.1.t
     desc = event_01.1.d
-    picture = ANGLICAN_SERMON_eventPicture
+    picture = INVENTION_eventPicture
 
     is_triggered_only = yes
 

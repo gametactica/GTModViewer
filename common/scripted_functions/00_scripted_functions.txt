@@ -52,12 +52,77 @@ can_increase_stability = {
         potential = {
         }
         allow = {
-            OR = {
-				ai = yes
+			OR = {
+				NOT = {stability = -2}
+				has_any_disaster = yes
+				ruler_has_personality = calm_personality
+				innovativeness = 90
+				AND = {
+					uses_church_aspects = yes
+					OR = {
+						has_church_aspect = priests_may_marry_aspect
+						has_church_aspect = pacifism_aspect
+						}
+					}
+				AND = {
+					uses_fervor = yes
+					fervor = 95
+					}
+				AND = {
+					uses_blessings = yes
+					num_of_active_blessings = 2
+					}
+				AND = {
+					uses_karma = yes
+					karma = -10
+					NOT = { karma = 10 }
+					}
+				AND = {
+					uses_religious_icons = yes
+					current_icon = icon_climacus
+					}
+				AND = {
+					uses_isolationism = yes
+					isolationism = 3
+					}
+				AND = {
+					uses_personal_deities = yes
+					has_personal_deity = ganesha
+					}
+				AND = {
+					religion = shamanism
+					OR = {
+					has_adopted_cult = zanahary_cult
+					has_adopted_cult = cwezi_cult
+					has_adopted_cult = nyame_cult
+						}
+					}
+				AND = {
+					religion = confucianism	
+					harmony = 90
+					}
+				AND = {
+					uses_syncretic_faiths = yes
+					has_matching_religion = confucianism
+					}
+				AND = {
+					uses_papacy = yes
+					is_papal_controller = yes
+					}
+				AND = { 
+					uses_piety = yes
+					piety = -0.1
+					NOT = { piety = 0.1 }
+					}
+				AND = {
+					religion = dreamtime	
+					has_adopted_cult = ancestor_story
+					}
+				religion = sikhism
+			}
 				is_at_war = no
-            }
-        }
-    }
+		}
+	}
 }
 
 # ROOT = province, FROM = country
@@ -71,8 +136,10 @@ can_remove_province_from_hre = {
 			ai = yes
 		}
 		allow = {
-			NOT = {
-				has_country_flag = permanently_left_hre_flag
+			owner = {
+				NOT = {
+					has_country_flag = permanently_left_hre_flag
+				}
 			}
 		}
 	}
@@ -184,7 +251,7 @@ can_have_colonial_nations = {
 			}
 		}
 		allow = {
-			always = no
+			always = no 
 		}
 	}
 }

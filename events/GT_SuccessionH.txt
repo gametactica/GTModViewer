@@ -1,0 +1,70 @@
+namespace = GT_SuccessionH
+
+country_event =
+{
+    id = GT_SuccessionH.1
+    title = GT_SuccessionH.1.t
+    desc = GT_SuccessionH.1.d
+    picture = HORDE_ON_HORSEBACK_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        has_reform = steppe_horde
+		ruler_age = 15
+    }
+	
+	option = {
+		name = "GT_SuccessionH.1.a"
+		trigger = {
+			mil = 5
+			}
+			add_stability = 2
+		}
+	
+	option = {
+		name = "GT_SuccessionH.1.b"
+		trigger = {
+			mil = 4
+			NOT = { mil = 5 }
+			}
+			add_stability = 1
+		}
+	
+	option = {
+		name = "GT_SuccessionH.1.c"
+		trigger = {
+			mil = 3
+			NOT = { mil = 4 }
+			}
+			add_stability = 0
+		}
+	
+	option = {
+		name = "GT_SuccessionH.1.e"
+		trigger = {
+			mil = 2
+			NOT = { mil = 3 }
+			}
+			add_stability = -1
+		}
+	
+	option = {
+		name = "GT_SuccessionH.1.f"
+		trigger = {
+			mil = 1
+			NOT = { mil = 2 }
+			}
+			add_stability = -2
+		}
+		
+	option = {
+		name = "GT_SuccessionH.1.g"
+		trigger = {
+			mil = 0
+			NOT = { mil = 1 }
+			}
+			add_stability = -3
+		}
+	}

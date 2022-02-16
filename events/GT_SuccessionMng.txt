@@ -1,0 +1,43 @@
+namespace = GT_SuccessionMng
+
+country_event =
+{
+    id = GT_SuccessionMng.1
+    title = GT_SuccessionMng.1.t
+    desc = GT_SuccessionMng.1.d
+    picture = CIVIL_WAR_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        government = monarchy
+		is_emperor_of_china = yes
+    }
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {	
+				country_event = {
+					id = GT_Scoring.1 
+					}
+				}
+			}
+		}
+		
+	option = {
+		name = "GT_SuccessionMng.1.a"
+		trigger = {
+			 total_development = 1000
+		}
+			add_stability = 1
+	}
+	
+	option = {
+		name = "GT_SuccessionMng.1.b"
+		trigger = {
+			 NOT = { total_development = 1000 }
+		}
+			add_stability = -1
+	}
+}

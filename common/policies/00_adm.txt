@@ -10,7 +10,8 @@ the_combination_act = {
 		full_idea_group = innovativeness_ideas
 	}
 	
-	production_efficiency = 0.20
+	production_efficiency = 0.1
+	cavalry_fire = 1
 
 	ai_will_do = {
 		factor = 1
@@ -179,7 +180,7 @@ the_espionage_act = {
 		full_idea_group = spy_ideas
 	}
 
-	liberty_desire = -10
+	reduced_liberty_desire = 10
 	diplomats = 1
 	
 	ai_will_do = {
@@ -690,12 +691,24 @@ exchange_of_ideas = {
 	
 	potential = {
 		has_idea_group = humanist_ideas
-		has_idea_group = trade_ideas
+		
+		OR = { 
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = humanist_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}	
 	
 	idea_cost = -0.1
@@ -1205,13 +1218,25 @@ the_statute_of_monopolies = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = trade_ideas
 		has_idea_group = economic_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
-		full_idea_group = trade_ideas
 		full_idea_group = economic_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 
 	production_efficiency = 0.1
@@ -1397,12 +1422,24 @@ the_banking_system = {
 
 	potential = {
 		has_idea_group = innovativeness_ideas
-		has_idea_group = trade_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = innovativeness_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 
 	interest = -0.25
@@ -1436,12 +1473,24 @@ church_sponsored_guilds = {
 
 	potential = {
 		has_idea_group = religious_ideas
-		has_idea_group = trade_ideas
+		
+		OR = {
+			has_idea_group = GT_dynamic0
+			has_idea_group = trade_ideas
+			has_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	allow = {
 		full_idea_group = religious_ideas
-		full_idea_group = trade_ideas
+		
+		OR = {
+			full_idea_group = GT_dynamic0
+			full_idea_group = trade_ideas
+			full_idea_group = GT_pirate0 
+		}
+		
 	}
 	
 	global_trade_goods_size_modifier = 0.1
@@ -1553,7 +1602,7 @@ to_the_ground_policy = {
 	}
 	
 	raze_power_gain = 0.33
-	horde_unity = 1
+	horde_unity = 0.25
 	
 	ai_will_do = {
 		factor = 1

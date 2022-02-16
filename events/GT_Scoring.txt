@@ -1,0 +1,21 @@
+namespace = GT_Scoring
+
+country_event =
+{
+    id = GT_Scoring.1
+    title = GT_Scoring.1.t
+    desc = GT_Scoring.1.d
+    picture = ECONOMY_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        ai = no
+    }
+    
+    option =
+    {
+        name = GT_Scoring.1.a
+    }
+}

@@ -1,0 +1,33 @@
+namespace = GT_SuccessionMam
+
+country_event =
+{
+    id = GT_SuccessionMam.1
+    title = GT_SuccessionMam.1.t
+    desc = GT_SuccessionMam.1.d
+    picture = RELIGIOUS_WARS_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        government = monarchy
+		tag = MAM
+    }
+	
+	option = {
+		name = "GT_SuccessionMam.1.a"
+		trigger = {
+			 is_defender_of_faith = yes
+			}
+			add_stability = 1
+		}
+	
+	option = {
+		name = "GT_SuccessionMam.1.b"
+		trigger = {
+			 is_defender_of_faith = no
+		}
+			add_stability = -1
+	}
+}

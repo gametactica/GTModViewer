@@ -252,9 +252,9 @@ nationalist_rebels = {
 			}
 			every_owned_province = {
 				limit = {
-					NOT = { has_province_flag = gt_player_capital }
 					has_rebel_faction = REB
 					culture = REB
+					NOT = { has_province_flag = gt_player_capital }
 				}
 				if = {
 					limit = { NOT = { is_core = REB } }
@@ -269,11 +269,11 @@ nationalist_rebels = {
 			}
 			every_owned_province = {
 				limit = {
-					NOT = { has_province_flag = gt_player_capital }
 					has_rebel_faction = REB
 					culture = REB
 					NOT = { is_core = REB }
 					culture = REB
+					NOT = { has_province_flag = gt_player_capital }
 				}
 				add_core = REB
 			}

@@ -97,6 +97,7 @@ royal_marriage = {
 			NOT = { war_with = FROM }
 		}
 	}
+	effect = { add_truce_with = FROM }
 }
 
 annexationaction = {
