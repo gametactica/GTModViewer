@@ -1,0 +1,118 @@
+country_decisions = {
+	
+
+	form_crusader_state_of_antioch = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_antioch_flag }
+			NOT = { exists = X02 }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion = catholic
+			NOT = { has_reform = celestial_empire }
+			OR = {
+					tag = KNI
+					tag = CYP
+					#OR catholic nation with land in Levant
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2313 #Antioch
+				province_id = 377
+				province_id = 4298
+				province_id = 1849
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			religion = catholic
+			ruler_religion = catholic
+			owns_core_province = 2313 #Antioch
+			owns_core_province = 377
+			owns_core_province = 4298
+			owns_core_province = 1849
+		
+			2313 = {
+                is_state = yes
+                religion = catholic
+            }
+			377 = {
+             is_state = yes
+             religion = catholic
+            }
+			4298 = {
+                is_state = yes
+                religion = catholic
+            }
+			1849 = {
+                is_state = yes
+                religion = catholic
+            }
+		}
+		effect = {
+			add_prestige = 50
+			add_stability = 2
+			
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 2313 
+						province_id = 377
+						province_id = 4298
+						province_id = 1849
+					}
+				}
+				add_core = X02
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							NOT = { tag = CYP }
+							NOT = { tag = KNI }
+						}
+						was_never_end_game_tag_trigger = no
+					}
+				}
+				release = X02
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = CYP
+						tag = KNI
+					}
+					was_never_end_game_tag_trigger = yes
+				}
+				change_tag = X02
+				if = {
+					limit = { has_custom_ideas = no }
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
+			}
+			X02 = {
+				set_capital = 2313 #Antioch
+				set_country_flag = formed_antioch_flag
+				change_government = theocracy
+				add_government_reform = holy_state_reform
+				add_accepted_culture = al_suryah_arabic
+				add_historical_rival = TUR
+				add_historical_rival = MAM
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}
+		

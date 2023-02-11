@@ -543,7 +543,7 @@ country_event = {
 	
 	trigger ={
 		tag = VEN
-		NOT = { has_idea = GT_explore1 }
+		NOT = { has_idea = GT_explore1 }  #GT
 		exists = SPA
 		SPA = {
 			OR = {

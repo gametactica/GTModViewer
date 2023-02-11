@@ -1,4 +1,4 @@
-the_combination_act = {
+the_combination_act = { #GT
 	monarch_power = ADM
 
 	potential = {
@@ -10,7 +10,7 @@ the_combination_act = {
 		full_idea_group = innovativeness_ideas
 	}
 	
-	production_efficiency = 0.1
+	cav_to_inf_ratio = 0.25
 	cavalry_fire = 1
 
 	ai_will_do = {
@@ -393,7 +393,7 @@ the_tolerance_act = {
 	}
 
 	tolerance_heretic = 2
-	rival_border_fort_maintenance = -0.5
+	rival_border_fort_maintenance = -0.25 #GT
 
 	ai_will_do = {
 		factor = 1
@@ -657,7 +657,7 @@ the_loyalty_act = {
 		full_idea_group = expansion_ideas
 	}
 	
-	global_autonomy = -0.05
+	global_autonomy = -0.03 #GT
 	global_spy_defence = 0.2
  
 
@@ -1128,7 +1128,7 @@ cultural_recognition_act = {
 	}
 }
 
-the_licensing_of_the_press_act = {
+the_licensing_of_the_press_act = { #GT
 	monarch_power = ADM
 
 	potential = {
@@ -1141,10 +1141,10 @@ the_licensing_of_the_press_act = {
 		full_idea_group = aristocracy_ideas
 	}
 
-	legitimacy = 1
-	republican_tradition = 0.1
-	devotion = 1
-	horde_unity = 1
+	legitimacy = 0.5
+	republican_tradition = 0.15
+	devotion = 0.5
+	horde_unity = 0.5
 	meritocracy = 0.5
 	
 	ai_will_do = {
@@ -1166,7 +1166,7 @@ the_dissolution_act = {
 	}
 	
 	global_tax_modifier = 0.15
-	global_autonomy = -0.05
+	global_autonomy = -0.03 #GT
 
 	ai_will_do = {
 		factor = 1
@@ -1901,6 +1901,7 @@ shared_land_policy = {
 	}
 	
 	build_cost = -0.15
+	improve_relation_modifier = 0.10 #GT
 
 	ai_will_do = {
 		factor = 1
@@ -1945,8 +1946,7 @@ ancestor_worship_policy = {
 		full_idea_group = indigenous_ideas
 	}
 	
-	missionaries = 1
-	tolerance_own = 1
+	tolerance_own = 2 #GT
 
 	ai_will_do = {
 		factor = 1

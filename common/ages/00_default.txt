@@ -1,0 +1,1456 @@
+age_of_discovery = {
+	start = 1400
+	
+	can_start = {
+		always = yes
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.0
+	
+
+	objectives = {
+		#obj_discover_america = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#		capital_scope = {
+		#			OR = {
+		#				continent = europe
+		#				continent = asia
+		#				continent = africa
+		#			}
+		#		}
+		#	}
+		#	custom_trigger_tooltip = {
+		#		tooltip = obj_discover_america_tooltip
+		#			OR = {
+		#				north_america = { has_discovered = ROOT }
+		#				south_america = { has_discovered = ROOT }
+		#				new_world = { has_discovered = ROOT }
+		#			}
+		#		}
+		#}
+		#obj_100_development = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#		capital_scope = {
+		#			NOT = {
+		#				continent = europe
+		#				continent = asia
+		#				continent = africa
+		#			}
+		#		}
+		#	}
+		#	total_development = 100
+		#}
+		#
+		#obj_5_centers_of_trade = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	calc_true_if = {
+		#		all_owned_province = {
+		#			OR = {
+		#				province_has_center_of_trade_of_level = 2
+		#				province_has_center_of_trade_of_level = 3
+		#			}
+		#			controlled_by = owner
+		#			is_core = ROOT
+		#		}
+		#		amount = 5
+		#	}
+		#}
+		#obj_30_development_city = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	custom_trigger_tooltip = {
+		#		tooltip = obj_30_development_city_tooltip
+		#		any_owned_province = {
+		#			exclude_from_progress = {
+		#				is_core = ROOT
+		#				controlled_by = owner
+		#			}
+		#			development_discounting_tribal = 30
+		#		}
+		#	}
+		#}
+		#obj_renaissance = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+	 	#	has_institution = renaissance
+	 	#	all_state_province = {
+	 	#		renaissance = 100
+	 	#	}
+		#}
+		#
+		#obj_two_unions = {
+		#	allow = {
+		#		religion_group = christian
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	personal_union  = 2
+		#}
+		#
+		#obj_many_vassals = {
+		#	allow = {
+		#		NOT = { religion_group = christian }
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	vassal = 5
+		#}
+		#
+		#obj_two_continents = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	num_of_continents = 2
+		#}
+		#
+		#obj_humiliate_rival = {
+		#	allow = {
+		#		NOT = { has_country_flag = gt_despot_iii }
+		#		NOT = { has_country_flag = gt_trader_iii }
+		#		NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	custom_trigger_tooltip = {
+		#		tooltip = obj_humiliate_rival_tooltip
+		#		has_country_flag = humiliated_rival
+		#	}
+		#}
+
+		#GT_emp_despot
+
+		obj_despot_conq = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+
+			OR = {
+				AND = {
+					41 = { 
+						owned_by = ROOT 
+					}
+					33 = { 
+						owned_by = ROOT 
+					}
+				}
+				AND = {
+					183 = { 
+						owned_by = ROOT 
+					}
+					262 = { 
+						owned_by = ROOT 
+					}
+				}
+				AND = {
+					245 = { 
+						owned_by = ROOT 
+					}
+					45 = { 
+						owned_by = ROOT 
+					}
+				}
+				AND = {
+					2555 = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+					993 = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+				}
+			}
+		}
+
+		obj_despot_imp = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+
+			OR = {
+				35 = { owned_by = ROOT }
+				4745 = { owned_by = ROOT }
+				1874 = { owned_by = ROOT }
+				69 = { owned_by = ROOT }
+				97 = { owned_by = ROOT }
+			}
+		}
+
+		obj_despot_dotf = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			is_defender_of_faith_of_tier = 2
+		}
+
+		obj_despot_HRE_land = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+
+			num_of_foreign_hre_provinces = 10
+		}
+
+		obj_despot_subject = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			num_of_subjects = 2
+		}
+
+		obj_despot_govt = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			government = monarchy
+			OR = {
+				is_emperor = yes
+				government_rank = 3
+			}
+		}
+
+		obj_despot_LD = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			is_subject_of_type = personal_union
+			liberty_desire = 75
+		}		
+
+		#GT_emp_trader
+
+		obj_trader_flagship = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			has_flagship = yes
+		}
+
+		obj_trader_tradenode = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			OR = {
+				any_active_trade_node = {
+					trade_share = {
+						country = ROOT
+						share = 25
+					}
+				}
+				AND = {
+					OR = {
+						has_reform = pirate_republic_reform
+						has_reform = pirate_kingdom
+						has_reform = war_against_the_world_government
+						has_reform = black_market_consortium_government
+					}
+					has_privateers = yes
+				}
+			}
+		}
+
+		obj_trader_imp = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			35 = { is_part_of_hre = yes }
+			4745 = { is_part_of_hre = yes }
+			1874 = { is_part_of_hre = yes }
+			69 = { is_part_of_hre = yes }
+			97 = { is_part_of_hre = yes }
+		}
+
+		obj_trader_conq = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+
+			OR = {
+				AND = {
+					41 = { is_part_of_hre = yes }
+					33 = { is_part_of_hre = yes }
+				}
+				AND = {
+					183 = { is_part_of_hre = yes }
+					262 = { is_part_of_hre = yes }
+				}
+				AND = {
+					245 = { is_part_of_hre = yes }
+					45 = { is_part_of_hre = yes }
+				}
+				AND = {
+					2555 = { has_revolution_in_province = yes }
+					993 = { has_revolution_in_province = yes }
+				}
+			}
+		}
+
+		obj_trader_bonus = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			num_of_trading_bonuses = 2
+			government = republic
+		}
+
+		obj_trader_HRE = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			hre_size = 60
+			#will_back_next_reform = yes
+		}
+
+		obj_trader_heresy = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			any_active_trade_node = {
+				ROOT = {
+					trading_policy_in_node = {
+						node = PREV
+						policy = propagate_religion
+					}
+				}
+			}
+			OR = {
+				has_matching_religion = anglican
+				has_matching_religion = reformed
+				has_matching_religion = protestant
+				has_matching_religion = orthodox
+				has_matching_religion = hussite
+			}
+		}	
+
+		#GT_emp_bishop
+
+		obj_bishop_cardinal = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			any_core_province = { 
+				has_cardinal = yes
+			}
+			government = theocracy
+		}
+
+		obj_bishop_curia = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			invested_papal_influence = 25
+		}
+
+		obj_bishop_rival = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			any_rival_country = { is_excommunicated = yes }
+		}
+
+		obj_bishop_imp = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+				}
+			35 = { religion = catholic }
+			4745 = { religion = catholic }
+			1874 = { religion = catholic }
+			69 = { religion = catholic }
+			97 = { religion = catholic }
+		}
+
+		obj_bishop_HRE = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			hre_religion = catholic
+		}
+
+		obj_bishop_dotf = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			any_country = { 
+				has_country_flag = gt_despot_iii
+				religion = catholic
+				is_defender_of_faith = yes
+			}
+		}
+
+		obj_bishop_conq = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			OR = {
+				AND = {
+					41 = { religion = catholic }
+					33 = { religion = catholic }
+				}
+				AND = {
+					183 = { religion = catholic }
+					262 = { religion = catholic }
+				}
+				AND = {
+					245 = { religion = catholic }
+					45 = { religion = catholic }
+				}
+				AND = {
+					2555 = { religion = catholic }
+					993 = { religion = catholic }
+				}
+			}
+		}
+	}		
+	
+
+	
+	abilities = {
+		ab_allow_feudal_de_jure_law = {
+			effect = {
+				custom_tooltip = feudal_de_jure_law
+				set_country_flag = feudal_de_jure_law
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_justified_wars = {
+			modifier = {
+				ae_impact = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}			
+		}
+		
+
+		ab_transfer_vassal_wargoal = 
+		{
+			modifier = {
+				can_transfer_vassal_wargoal = yes
+				can_chain_claim = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_free_war_taxes = {
+			modifier = {
+				war_taxes_cost_modifier = -1.0
+			}
+			ai_will_do = {
+				factor = 10
+			}	
+		}
+		
+
+		ab_cavalry_armies = {
+			modifier = {
+				cav_to_inf_ratio = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_colony_boost_development = {
+			modifier = {
+				can_colony_boost_development = yes
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+		}
+		
+		ab_attack_bonus_in_capital_terrain = {
+			modifier = {
+				attack_bonus_in_capital_terrain = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_ottoman_siege_ability = {
+			allow = {
+				tag = TUR
+			}
+			modifier = {
+				siege_ability = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_portugal_colonial_growth = {
+		
+			allow = {
+				tag = POR
+			}
+			modifier = {
+				global_colonial_growth = 50
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_denmark_reduced_lib_desire = {
+		
+			allow = {
+				tag = DAN
+			}
+			modifier = {
+				reduced_liberty_desire = 30
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 20
+						}
+					}
+				}
+			}
+		}
+		ab_venice_ship_trade = {
+		
+			allow = {
+				tag = VEN
+			}
+			modifier = {
+				global_ship_trade_power = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}
+
+age_of_reformation = {
+	start = 1530
+	
+	can_start = {
+		is_religion_enabled = protestant
+	}
+	
+	
+	religious_conflicts = yes
+	papacy = 1.25
+	
+	objectives = {
+		
+		#obj_christian_convert = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	OR = {
+		#		religion = protestant
+		#		religion = reformed
+		#		religion = anglican
+		#		religion = hussite
+		#	}
+		#}
+		#
+		#obj_humanism_religious = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	OR = {
+		#		full_idea_group = humanist_ideas
+		#		full_idea_group = religious_ideas
+		#	}
+		#}
+		#
+		#obj_convert_10_provinces = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	custom_trigger_tooltip = {
+		#		tooltip = obj_convert_10_provinces_tooltip
+		#		check_variable = { which = num_converted_religion value = 10 }
+		#	}
+		#}
+		#
+		#obj_colonial_empire = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	colony = 5
+		#}
+		#
+		#obj_force_converted = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	custom_trigger_tooltip = {
+		#		tooltip = obj_force_converted_tooltip
+		#		has_country_flag = force_converted
+		#	}
+		#}
+		#
+		#obj_asian_trade = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}
+		#	OR = {
+		#		trading_bonus = {
+		#			trade_goods = spices
+		#			value = yes
+		#		}
+		#		trading_bonus = {
+		#			trade_goods = cloves
+		#			value = yes
+		#		}
+		#		trading_bonus = {
+		#			trade_goods = chinaware
+		#			value = yes
+		#		}
+		#		trading_bonus = {
+		#			trade_goods = silk
+		#			value = yes
+		#		}
+		#		trading_bonus = {
+		#			trade_goods = cloves
+		#			value = yes
+		#		}
+		#	}
+		#}
+		#
+		#obj_unify_culture = {
+		#	allow = {
+		#		#NOT = { has_country_flag = gt_despot_iii }
+		#		#NOT = { has_country_flag = gt_trader_iii }
+		#		#NOT = { has_country_flag = gt_bishop_iii }
+		#	}	
+		#	is_subject = no
+		#	has_unified_culture_group = yes
+		#}
+
+		#GT_emp_despot
+
+		obj_despot_conq = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+
+			OR = {
+				AND = {
+					41 = { 
+						owned_by = ROOT 
+					}
+					33 = { 
+						owned_by = ROOT 
+					}
+				}
+				AND = {
+					183 = { 
+						owned_by = ROOT 
+					}
+					262 = { 
+						owned_by = ROOT 
+					}
+				}
+				AND = {
+					245 = { 
+						owned_by = ROOT 
+					}
+					45 = { 
+						owned_by = ROOT 
+					}
+				}
+				AND = {
+					2555 = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+					993 = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+				}
+			}
+		}
+
+		obj_despot_imp = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+
+			OR = {
+				35 = { owned_by = ROOT }
+				4745 = { owned_by = ROOT }
+				1874 = { owned_by = ROOT }
+				69 = { owned_by = ROOT }
+				97 = { owned_by = ROOT }
+			}
+		}
+
+		obj_despot_dotf = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			is_defender_of_faith_of_tier = 2
+		}
+
+		obj_despot_HRE_land = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+
+			num_of_foreign_hre_provinces = 10
+		}
+
+		obj_despot_subject = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			num_of_subjects = 2
+		}
+
+		obj_despot_govt = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			government = monarchy
+			OR = {
+				is_emperor = yes
+				government_rank = 3
+			}
+		}
+
+		obj_despot_LD = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_despot_iii
+			}
+			is_subject_of_type = personal_union
+			liberty_desire = 75
+		}		
+
+		#GT_emp_trader
+
+		obj_trader_flagship = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			has_flagship = yes
+		}
+
+		obj_trader_tradenode = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			OR = {
+				any_active_trade_node = {
+					trade_share = {
+						country = ROOT
+						share = 25
+					}
+				}
+				AND = {
+					OR = {
+						has_reform = pirate_republic_reform
+						has_reform = pirate_kingdom
+						has_reform = war_against_the_world_government
+						has_reform = black_market_consortium_government
+					}
+					has_privateers = yes
+				}
+			}
+		}
+
+		obj_trader_imp = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			35 = { is_part_of_hre = yes }
+			4745 = { is_part_of_hre = yes }
+			1874 = { is_part_of_hre = yes }
+			69 = { is_part_of_hre = yes }
+			97 = { is_part_of_hre = yes }
+		}
+
+		obj_trader_conq = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+
+			OR = {
+				AND = {
+					41 = { is_part_of_hre = yes }
+					33 = { is_part_of_hre = yes }
+				}
+				AND = {
+					183 = { is_part_of_hre = yes }
+					262 = { is_part_of_hre = yes }
+				}
+				AND = {
+					245 = { is_part_of_hre = yes }
+					45 = { is_part_of_hre = yes }
+				}
+				AND = {
+					2555 = { has_revolution_in_province = yes }
+					993 = { has_revolution_in_province = yes }
+				}
+			}
+		}
+
+		obj_trader_bonus = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			num_of_trading_bonuses = 2
+			government = republic
+		}
+
+		obj_trader_HRE = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			hre_size = 60
+			#will_back_next_reform = yes
+		}
+
+		obj_trader_heresy = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_trader_iii
+			}
+			any_active_trade_node = {
+				ROOT = {
+					trading_policy_in_node = {
+						node = PREV
+						policy = propagate_religion
+					}
+				}
+			}
+			OR = {
+				has_matching_religion = anglican
+				has_matching_religion = reformed
+				has_matching_religion = protestant
+				has_matching_religion = orthodox
+				has_matching_religion = hussite
+			}
+		}	
+
+		#GT_emp_bishop
+
+		obj_bishop_cardinal = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			any_core_province = { 
+				has_cardinal = yes
+			}
+			government = theocracy
+		}
+
+		obj_bishop_curia = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			invested_papal_influence = 25
+		}
+
+		obj_bishop_rival = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			any_rival_country = { is_excommunicated = yes }
+		}
+
+		obj_bishop_imp = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+				}
+			35 = { religion = catholic }
+			4745 = { religion = catholic }
+			1874 = { religion = catholic }
+			69 = { religion = catholic }
+			97 = { religion = catholic }
+		}
+
+		obj_bishop_HRE = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			hre_religion = catholic
+		}
+
+		obj_bishop_dotf = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			any_country = { 
+				has_country_flag = gt_despot_iii
+				religion = catholic
+				is_defender_of_faith = yes
+			}
+		}
+
+		obj_bishop_conq = {
+			allow = {
+				has_country_flag = gt_was_player
+				has_country_flag = gt_bishop_iii
+			}
+			OR = {
+				AND = {
+					41 = { religion = catholic }
+					33 = { religion = catholic }
+				}
+				AND = {
+					183 = { religion = catholic }
+					262 = { religion = catholic }
+				}
+				AND = {
+					245 = { religion = catholic }
+					45 = { religion = catholic }
+				}
+				AND = {
+					2555 = { religion = catholic }
+					993 = { religion = catholic }
+				}
+			}
+		}
+	}
+	
+	
+	
+	abilities = {
+	
+		ab_allow_religion_enforced = {
+			effect = {
+				custom_tooltip = religion_enforced_edict
+				set_country_flag = religion_enforced_edict
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	
+
+		ab_siege_blockades = {
+			modifier = {
+				siege_blockade_progress = 1
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = {
+							num_of_ports = 5
+					}
+				}
+
+			}
+		}
+
+		
+		ab_warscore_vs_religion = {
+			modifier = {
+				warscore_cost_vs_other_religion = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		ab_mercenary_discipline = {
+			modifier = {
+				mercenary_discipline = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_ship_power_propagation = {
+			modifier = {
+				ship_power_propagation = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		
+		ab_institution_spread_from_true_faith = {
+			modifier = {
+				institution_spread_from_true_faith = 0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		ab_prestige_per_development_from_conversion = {
+			modifier = {
+				prestige_per_development_from_conversion = 0.3
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+	
+		ab_spain_tercio = {
+			allow = {
+				tag = SPA
+			}
+			modifier = {
+				shock_damage_received = -0.3
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_mughal_artillery = {
+			allow = {
+				tag = MUG
+			}
+			modifier = {
+				artillery_cost = -0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_polish_legitimacy = {
+			allow = {
+				OR = {
+					tag = PLC
+					tag = POL
+				}
+			}
+			modifier = {
+				global_trade_goods_size_modifier = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_persia_reinforce = {
+			allow = {
+				tag = PER
+			}
+			modifier = {
+				reinforce_cost_modifier = -0.3
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}
+
+
+
+
+age_of_absolutism = {
+	start = 1620
+	
+	can_start = {
+		is_institution_enabled = global_trade
+	}
+	
+	papacy = 1.5
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+	}
+	
+	
+	
+	objectives = {
+
+	}		
+	
+	
+	abilities = {
+	
+		ab_allow_edict_of_absolutism = {
+			effect = {
+				custom_tooltip = edict_of_absolutism_tt
+				set_country_flag = edict_of_absolutism
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		ab_rival_change = {
+			modifier = {
+				rival_change_cost = -0.5
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		ab_rival_border_fort = {
+			modifier = {
+				rival_border_fort_maintenance = -1.0
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+
+		ab_autonomy = {
+			modifier = {
+				autonomy_change_time = -0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+
+		ab_harsh_treatment = {
+			modifier = {
+				harsh_treatment_cost = -0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+	
+		ab_adm_efficiency = {
+			modifier = {
+				administrative_efficiency = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		ab_yearly_absolutism = {
+			modifier = {
+				yearly_absolutism = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	
+	
+		ab_france_fire_damage = {
+			allow = {
+				tag = FRA
+			}
+			modifier = {
+				fire_damage = 0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_dutch_anti_corruption = {
+			allow = {
+				tag = NED
+			}
+			modifier = {
+				yearly_corruption = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		ab_sweden_manpower = {
+			allow = {
+				OR = {
+					tag = SWE
+					tag = SCA
+				}
+			}
+			modifier = {
+				manpower_recovery_speed = 0.35
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		ab_manchu_banner = {
+			allow = {
+				OR = {
+					tag = MCH
+					tag = QNG
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						NOT = { primary_culture = manchu }
+						NOT = { primary_culture = manchu_new }
+						NOT = { has_government_attribute = allow_banners }
+					}
+					custom_tooltip = ab_manchu_banner_tt
+				}
+			}
+			modifier = {
+				amount_of_banners = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}
+
+age_of_revolutions = {
+	start = 1710
+	
+	can_start = {
+		is_institution_enabled = enlightenment
+	}
+	
+	papacy = 2.0
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+	}
+	
+	
+	objectives = {
+
+	}		
+
+
+	abilities = {
+
+		ab_allow_anti_revolutionary_zeal = {
+			modifier = {
+				liberty_desire_from_subject_development = -0.33
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+						}
+					}
+				}
+			}
+		}
+
+		ab_napoleonic_warfare = {
+			modifier = {
+				artillery_levels_available_vs_fort = 3
+			}
+			ai_will_do = {
+				factor = 15
+			}
+		}
+		
+
+		
+		ab_force_march = {
+			modifier = {
+				force_march_free = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_more_ships_can_fire = {
+			modifier = {
+				global_naval_engagement_modifier = 0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_no_distance_for_core = {
+			modifier = {
+				ignore_coring_distance = yes
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					# AI peace code relies on being limited by coring range, or it will create crazy border gore where it can't reach its new lands
+					factor = 0
+					OR = {
+						is_subject = no
+						overlord = {
+							ai = yes
+						}
+					}
+				}
+			}
+		}
+		
+		ab_backrow_artillery = {
+			modifier = {
+				backrow_artillery_damage = 0.20
+			}
+			ai_will_do = {
+				factor = 15
+			}
+		}
+		ab_same_contine_lib_desire = {
+			modifier = {
+				reduced_liberty_desire_on_same_continent = 25
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+							same_continent = ROOT
+						}
+					}
+				}
+			}
+		}
+		ab_pru_military = {
+			allow = {
+				OR = {
+					tag = PRU
+					tag = GER
+				}
+			}
+			modifier = {
+				fire_damage_received = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_gbr_fleet = {
+			allow = {
+				tag = GBR
+			}
+			modifier = {
+				naval_maintenance_modifier = -0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_russia_boost = {
+			allow = {
+				tag = RUS
+			}
+			modifier = {
+				governing_capacity_modifier = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_austria_rep = {
+			allow = {
+				OR = {
+					tag = HAB
+					tag = HLR
+				}
+			}
+			modifier = {
+				diplomatic_reputation = 5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}

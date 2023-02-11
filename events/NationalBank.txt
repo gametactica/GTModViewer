@@ -7,7 +7,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_country_flag = bank }
-		has_idea = GT_econ3
+		has_idea = GT_econ3 #GT
 		adm = 4
 	}
 

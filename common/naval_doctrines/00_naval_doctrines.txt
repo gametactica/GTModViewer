@@ -1,10 +1,9 @@
-fleet_in_being =
-{
+fleet_in_being = {
 	can_select = {
 		is_primitive = no
 	}
 	
-	country_modifier = {
+	country_modifier = { #GT
 		naval_maintenance_modifier = -0.15
 		admiral_cost = -0.25
 	}
@@ -12,13 +11,12 @@ fleet_in_being =
 	button_gfx = 1
 }
 
-free_oarsmen =
-{
+free_oarsmen = {
 	can_select = {
 		is_primitive = no
 	}
 
-	country_modifier = {
+	country_modifier = { #GT
 		galley_power = 0.2
 		ship_durability = 0.1
 	}
@@ -26,42 +24,40 @@ free_oarsmen =
 	button_gfx = 2
 }
 
-merchant_navy =
-{
+merchant_navy = {
 	can_select = {
 		is_primitive = no
 	}
 
-	country_modifier = {
-		global_ship_trade_power = 0.25
-		sailor_maintenance_modifer = -0.1
+	country_modifier = { #GT
+		light_ship_cost = -0.15
+		sailor_maintenance_modifer = -0.15
 	}
 	
 	button_gfx = 3
 }
 
-ship_boarding =
-{
+ship_boarding = {
 	can_select = {
 		is_primitive = no
 	}
 
-	country_modifier = {
-		capture_ship_chance = 0.33
+	country_modifier = { #GT
+		capture_ship_chance = 0.25
 		naval_morale = 0.1
 	}
 	
 	button_gfx = 4
 }
 
-wooden_wall =
-{
+wooden_wall = {
 	can_select = {
 		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
 		culture_group = british
 	}
 
-	country_modifier = {
+	country_modifier = { #GT
 		own_coast_naval_combat_bonus = 1.0
 		blockade_efficiency = 0.1
 	}
@@ -69,20 +65,22 @@ wooden_wall =
 	button_gfx = 5
 }
 
-grand_armada =
-{
+grand_armada = {
 	can_select = {
 		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
 		NOT = {
 			OR = {
 				primary_culture = portugese
 				primary_culture = brazilian
+				primary_culture = aragonese
+				primary_culture = catalan
 			}
 		}
 		culture_group = iberian
 	}
 
-	country_modifier = {
+	country_modifier = { #GT
 		treasure_fleet_income = 0.5
 		prestige_from_naval = 0.2
 	}
@@ -90,21 +88,182 @@ grand_armada =
 	button_gfx = 6
 }
 
-portuguese_marines =
-{
+portuguese_marines = {
 	can_select = {
 		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
 		OR = {
 			primary_culture = portugese
 			primary_culture = brazilian
 		}
 	}
 
-	country_modifier = {
+	country_modifier = { #GT
 		siege_blockade_progress = 1
-		navy_tradition_decay = -0.01
-		allowed_marine_fraction = 0.20
+		allowed_marine_fraction = 0.25
 	}
 
 	button_gfx = 7
+}
+
+aragonese_fleet = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		OR = {
+			primary_culture = aragonese
+			primary_culture = catalan
+		}
+	}
+
+	country_modifier = { #GT
+		global_naval_engagement_modifier = 0.15
+		navy_tradition_decay = -0.01
+	}
+
+	button_gfx = 8
+}
+
+danish_admirality = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		primary_culture = danish
+	}
+
+	country_modifier = { #GT
+		leader_naval_manuever = 2
+		sunk_ship_morale_hit_recieved = -0.1
+	}
+
+	button_gfx = 9
+}
+
+norwegian_sailors = {
+	can_select = {
+		is_primitive = no
+		OR = {
+			has_country_flag = unlock_norwegian_naval_doctrine
+			primary_culture = norwegian
+		}
+		NOT = { has_country_flag = nor_upgraded_norwegian_sailors_doctrine }
+	}
+
+	country_modifier = { #GT
+		landing_penalty = -1
+		movement_speed_in_fleet_modifier = 1
+	}
+
+	button_gfx = 10
+}
+
+norwegian_sailors_upgraded = {
+	can_select = {
+		is_primitive = no
+		primary_culture = norwegian
+		has_country_flag = nor_upgraded_norwegian_sailors_doctrine
+	}
+
+	country_modifier = { #GT
+		landing_penalty = -2
+		movement_speed_in_fleet_modifier = 2
+	}
+
+	button_gfx = 11
+}
+
+dutch_trade_fleet = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		OR = {
+			primary_culture = dutch
+			primary_culture = flemish
+		}
+	}
+
+	country_modifier = { #GT
+		global_ship_trade_power = 0.25
+		range = 0.25
+	}
+
+	button_gfx = 12
+}
+
+norse_raid_fleet = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		primary_culture = norse
+	}
+
+	country_modifier = { #GT
+		may_perform_slave_raid = yes
+		galley_cost = -0.15
+	}
+
+	button_gfx = 13
+}
+
+venetian_arsenal_naval_doctrine = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		primary_culture = venetian
+	}
+
+	country_modifier = { #GT
+		naval_forcelimit_modifier = 0.1
+		sailors_recovery_speed = 0.2
+	}
+
+	button_gfx = 14
+}
+
+korean_panokseon = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		OR = {
+			culture_group = korean_g
+			primary_culture = korean_new
+		}
+	}
+
+	country_modifier = { #GT
+		own_coast_naval_combat_bonus = 0.75
+		blockade_efficiency = 0.15
+	}
+
+	button_gfx = 15
+}
+
+japanese_atakebune = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		culture_group = japanese_g
+	}
+
+	country_modifier = { #GT
+		heavy_ship_power = 0.1
+		ship_durability = 0.05
+	}
+
+	button_gfx = 16
+}
+
+hanseatic_trade_fleet = {
+	can_select = {
+		is_primitive = no
+		NOT = { has_country_flag = unlock_norwegian_naval_doctrine } 
+		primary_culture = lower_saxon
+	}
+
+	country_modifier = { #GT
+		naval_forcelimit = 10
+		naval_tradition_from_trade = 0.75
+	}
+
+	button_gfx = 17
 }

@@ -86,7 +86,176 @@
 # knowledge_sharing
 
 
+#Cut because the Grand Crusade war doesn't really have any place in the current content, but it could be very useful for the future.
+#Also modders should have the chance to just uncomment it all so they can experience the great 30 Years War like Crusade.
+declarewar = {
+	#condition = {
+	#	tooltip = GRAND_CRUSADE_NO_OTHER_WAR
+	#	potential = { }
+	#	allow = {
+	#		NOT = {
+	#			is_in_war = {
+	#				attacker_leader = ROOT
+	#				casus_belli = cb_grand_crusade
+	#			}
+	#		}
+	#	}
+	#}
+	#effect = {
+	#	if = {
+	#		limit = {
+	#			has_global_flag = grand_crusades_enabled
+	#			has_country_flag = grand_crusader_war_monger_flag
+	#			is_in_war = {
+	#				attacker_leader = ROOT
+	#				casus_belli = cb_grand_crusade
+	#			}
+	#		}
+	#		FROM = {
+	#			save_global_event_target_as = grand_crusade_target
+	#		}
+	#	}
+	#}
+	effect = {
+		if = {
+			limit = { 
+				has_country_flag = nor_norwegian_independence_modifier
+				FROM = { tag = DAN }
+			}
+			add_country_modifier = {
+				name = nor_norwegian_independence_war_mod
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = teu_joined_the_hre
+				tag = TEU
+				is_part_of_hre = yes
+				FROM = { is_part_of_hre = yes }
+			}
+			clr_country_flag = teu_joined_the_hre
+			country_event = {
+				id = flavor_teu.33
+				days = 10
+			}
+		}
+	}
+}
 
+allianceaction = {
+	condition = {
+		tooltip = PIRATE_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_pirates
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_pirates }
+				FROM = { has_government_attribute = is_pirate_republic_reform }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_PIRATE_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_pirates
+			}
+			NOT = { has_government_attribute = is_pirate_republic_reform }
+		}
+		allow = {
+			OR = {
+				has_government_attribute = is_pirate_republic_reform
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_pirates } }
+			}
+		}
+	}
+	condition = {
+		tooltip = REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_republics
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_republics }
+				FROM = { government = republic }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_republics
+			}
+			NOT = { government = republic }
+		}
+		allow = {
+			OR = {
+				government = republic
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics } }
+			}
+		}
+	}
+	condition = {
+		tooltip = REV_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_republics_or_non_rev
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_republics_or_non_rev }
+				FROM = { 
+					OR = {
+						government = republic 
+						is_revolutionary = yes
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_REV_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_republics_or_non_rev
+			}
+			NOT = { government = republic }
+			is_revolutionary = no
+		}
+		allow = {
+			OR = {
+				OR = {
+					government = republic 
+					is_revolutionary = yes
+				}
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics_or_non_rev } }
+			}
+		}
+	}
+}
+
+enforce_peace = {
+	#do this before the peace is enforced, or there is no war enemy country
+	pre_effect = {
+		if = {
+			limit = {
+				has_country_modifier = liv_protector_of_the_catholics
+				FROM = {
+					any_war_enemy_country = {
+						religion = catholic
+						is_in_war = {
+							defender_leader = THIS
+							attacker_leader = FROM
+						}
+					}
+				}
+			}
+			add_papal_influence = 25
+		}
+	}
+}
 
 royal_marriage = {
 	condition = {
@@ -97,7 +266,7 @@ royal_marriage = {
 			NOT = { war_with = FROM }
 		}
 	}
-	effect = { add_truce_with = FROM }
+	effect = { add_truce_with = FROM } #GT
 }
 
 annexationaction = {
@@ -113,6 +282,9 @@ annexationaction = {
 				has_opinion = {
 					who = ROOT
 					value = 190
+				}
+				NOT = { #GT
+					has_country_flag = gt_was_player 
 				}
 			}
 		}
@@ -147,23 +319,21 @@ integrationaction = {
 					who = ROOT
 					value = 190
 				}
+				NOT = { #GT
+					has_country_flag = gt_was_player 
+				}
 			}
 		}
 	}
-	#condition = {
-	#	tooltip = INTEGRATEINVALID
-	#	potential = {
-	#		senior_union_with = FROM
-	#	}
-	#	allow = {
-	#		FROM = {
-	#			years_in_union_under = {
-	#				who = ROOT
-	#				years = 50
-	#			}
-	#		}
-	#	}
-	#}
+	condition = {
+		tooltip = PUINTEGRATIONIMPOSSIBLE
+		potential = {
+			has_government_attribute = cannot_integrate_personal_unions
+		}
+		allow = {
+			NOT = { has_government_attribute = cannot_integrate_personal_unions }
+		}
+	}
 }
 
 vassalaction = {
@@ -172,7 +342,7 @@ vassalaction = {
 		potential = {
 		}
 		allow = {
-			FROM = { guaranteed_by = ROOT }
+			FROM = { guaranteed_by = ROOT } #GT
 			FROM = {
 				has_opinion = {
 					who = ROOT
@@ -195,6 +365,15 @@ abandon_union_action = {
 			}
 		}
 	}
+	condition = {
+		tooltip = PUABANDONINGIMPOSSIBLE
+		potential = {
+			has_government_attribute = cannot_abandon_personal_unions
+		}
+		allow = {
+			NOT = { has_government_attribute = cannot_abandon_personal_unions }
+		}
+	}
 }
 
 form_coalition = {
@@ -203,15 +382,20 @@ form_coalition = {
 		potential = {	
 		}
 		allow = {
-			has_opinion_modifier = {
-				modifier = aggressive_expansion
-				who = FROM
-			}		
-			NOT = {
-				has_opinion_modifier = {
-					modifier = aggressive_expansion
-					who = FROM
-					value = -50
+			OR = {  #GT
+				full_idea_group = diplomatic_ideas
+				AND = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+					}		
+					NOT = {
+						has_opinion_modifier = {
+							modifier = aggressive_expansion
+							who = FROM
+							value = -50
+						}
+					}
 				}
 			}
 		}
@@ -247,6 +431,86 @@ invite_to_trade_league = {
 						share = 1
 					}
 				}
+			}
+		}
+	}
+}
+
+tributary_state_action = {
+	condition = {
+		potential = { #GT
+			OR= {
+			ai = no
+			ai = yes
+			}
+		}
+		allow = {
+			OR = {
+				NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+				AND = {
+					ROOT = { capital_scope = { superregion = china_superregion } }
+					NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
+				}
+			}
+			OR = {
+				NOT = { ROOT = { capital_scope = { region = japan_region } } }
+				AND = {
+					ROOT = { capital_scope = { region = japan_region } }
+					NOT = { FROM = { capital_scope = { region = japan_region } } }
+				}
+			}
+			NOT = { FROM = { is_in_trade_league = yes } } #GT
+			NOT = { FROM = { is_great_power = yes } } #GT
+			NOT = { FROM = { is_emperor = yes } } #GT
+			ROOT = { is_neighbor_of = FROM } #GT
+		}
+	}
+}
+ask_for_tributary_state_action = {
+	condition = {
+		potential = { #GT
+			OR= {
+			ai = no
+			ai = yes
+			}
+		}
+		allow = {
+			OR = {
+				NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
+				AND = {
+					FROM = { capital_scope = { superregion = china_superregion } }
+					NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+				}
+			}
+			OR = {
+				NOT = { FROM = { capital_scope = { region = japan_region } } }
+				AND = {
+					FROM = { capital_scope = { region = japan_region } }
+					NOT = { ROOT = { capital_scope = { region = japan_region } } }
+				}
+			}
+			NOT = { ROOT = { is_in_trade_league = yes } } #GT
+			NOT = { ROOT = { is_great_power = yes } } #GT
+			NOT = { ROOT = { is_emperor = yes } } #GT
+			ROOT = { is_neighbor_of = FROM } #GT
+		}
+	}
+}
+#GT
+influence_nation = {
+	condition = {
+		#tooltip = GT_pending
+		potential = {
+		}
+		allow = {
+			NOT = { war_with = FROM }
+		}
+	}
+	effect = { 
+		every_rival_country = {
+			reverse_add_opinion = {
+    			who = FROM
+    			modifier = GT_influence_action
 			}
 		}
 	}

@@ -13,7 +13,7 @@ edict_of_absolutism = {
 	
 	modifier = {
 	
-		local_culture_conversion_cost = -0.25
+		local_culture_conversion_cost = -0.25 #GT
 	}
 	
 	color = {  116 198 240  }

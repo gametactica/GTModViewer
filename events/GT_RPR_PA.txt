@@ -1,0 +1,36 @@
+namespace = GT_RPR_PA
+
+country_event =
+{
+    id = GT_RPR_PA.1
+    title = GT_RPR_PA.1.t
+    desc = GT_RPR_PA.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+    fire_only_once = yes
+    mean_time_to_happen = {months = 1} 
+
+    trigger =
+    {
+        has_country_flag = is_RPR_flag
+        ai = no
+    }
+
+    option =
+    {
+        name = GT_RPR_PA.1.a
+        
+        every_owned_province = 
+        {
+            limit = {has_province_flag = gt_player_capital }
+            area = 
+            {
+                clr_province_flag = gt_capital_province_@ROOT
+                set_province_flag = gt_capital_province_@ROOT
+            }
+
+        }
+        
+    }
+}

@@ -122,7 +122,7 @@ technology = { #Courthouse
 	}
 
 	courthouse = yes
-	governing_capacity = 50
+	governing_capacity = 50 #GT
 
 }
 
@@ -179,7 +179,7 @@ technology = { #Early Modern Administration
 	
 	administrative_monarchy	= yes 
 	administrative_republic	= yes
-	governing_capacity = 50
+	governing_capacity = 50 #GT
 	state_house = yes
 }
 
@@ -253,10 +253,10 @@ technology = { #University
 	}
 	
 	university = yes	
-	governing_capacity = 50
+	governing_capacity = 50 #GT
 	
 	administrative_efficiency = 0.1
-	development_efficiency = 0.1
+	development_cost_modifier = -0.1
 }
 
 technology = { #National Sovereignty
@@ -300,7 +300,7 @@ technology = { #Absolute Rulership
 	}
 	
 	republican_dictatorship = yes
-	governing_capacity = 50
+	governing_capacity = 50 #GT
 }
 
 technology = { #Land Clearance
@@ -352,7 +352,7 @@ technology = { #Measuring the World
 	}
 	
 	administrative_efficiency = 0.1
-	development_efficiency = 0.1
+	development_cost_modifier = -0.1
 }
 
 technology = { #Bonds and Tontines
@@ -369,7 +369,7 @@ technology = { #Bonds and Tontines
 	}
 	
 	counting_house = yes  
-	governing_capacity = 50
+	governing_capacity = 50 #GT
 }
 
 technology = { #Improved Production
@@ -419,8 +419,8 @@ technology = { #Modern Bureaucracy
 	}
 
 	administrative_efficiency = 0.1
-	development_efficiency = 0.1	
-	governing_capacity = 50
+	development_cost_modifier = -0.1	
+	governing_capacity = 50 #GT
 }
 
 technology = { #Rotherham Plough
@@ -494,7 +494,7 @@ technology = { #Revolutionary Ideals
 	
 	revolutionary_republic = yes
 	revolutionary_empire = yes
-	governing_capacity = 50
+	governing_capacity = 50 #GT
 }
 
 technology = { #Four Field Rotation

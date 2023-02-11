@@ -15,7 +15,7 @@ country_event =
     {
         is_great_power = yes 
         NOT = {great_power_rank = 9}
-        great_power_rank = 7
+        great_power_rank = 8
     }
 
     immediate = 

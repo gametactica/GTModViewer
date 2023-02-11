@@ -480,6 +480,7 @@ country_event = {
 	option = {		# 
 		name = "flavor_por.EVTOPTA3278"
 		227 = {
+			add_devastation = 100
 			add_province_modifier = {
 				name = earthquake
 				duration = 3650
@@ -659,7 +660,7 @@ country_event = {
 		if = {
 			limit = {
 				exists = SPA
-				SPA = { has_idea = GT_explore1 }
+				SPA = { has_idea = GT_explore1 } #GT
 			}
 			SPA = {
 				country_event = { id = flavor_spa.1 days = 10 }
@@ -669,7 +670,7 @@ country_event = {
 			limit = {
 				NOT = { exists = SPA }
 				exists = CAS
-				CAS = { has_idea = GT_explore1 }
+				CAS = { has_idea = GT_explore1 } #GT
 			}
 			CAS = {
 				country_event = { id = flavor_spa.1 days = 10 }
@@ -683,12 +684,12 @@ country_event = {
 						NOT = { exists = CAS }
 					}
 					AND = {
-						CAS = { NOT = { has_idea = GT_explore1 } }
-						SPA = { NOT = { has_idea = GT_explore1 } }
+						CAS = { NOT = { has_idea = GT_explore1 } } #GT
+						SPA = { NOT = { has_idea = GT_explore1 } } #GT
 					}
 				}
 				any_known_country = {
-					has_idea = GT_explore1
+					has_idea = GT_explore1 #GT
 					religion = catholic
 				}
 			}
@@ -696,7 +697,7 @@ country_event = {
 				limit = {
 					NOT = { has_country_flag = turned_down_columbus }
 					religion = catholic
-					has_idea = GT_explore1
+					has_idea = GT_explore1 #GT
 				}
 				country_event = { id = flavor_spa.1 }
 			}

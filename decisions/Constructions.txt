@@ -3,7 +3,7 @@ country_decisions = {
 	eng_corps_boost = {
 		potential = {
 			always = no
-			has_idea = GT_offense4
+			has_idea = GT_offense4 #GT
 			NOT = { has_country_modifier = improved_fort_defense }
 		}
 		allow = {

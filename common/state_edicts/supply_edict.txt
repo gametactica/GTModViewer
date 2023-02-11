@@ -1,0 +1,17 @@
+edict_supply_edict = {
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		supply_limit_modifier = 0.2
+	}
+	
+	color = {  142 15 107  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -37,7 +37,7 @@ nationalist_rebels = {
 		factor = 10
 		modifier = {
 			factor = 0.01
-			NOT = { nationalism = 1 }
+			NOT = { nationalism_debug = 1 }
 			owner = {
 				OR = {
 					accepted_culture = ROOT
@@ -93,7 +93,7 @@ nationalist_rebels = {
 		}
 		modifier = {
 			factor = 10
-			nationalism = 1
+			nationalism_debug = 1
 		}
 		modifier = {
 			factor = 15
@@ -254,7 +254,7 @@ nationalist_rebels = {
 				limit = {
 					has_rebel_faction = REB
 					culture = REB
-					NOT = { has_province_flag = gt_player_capital }
+					NOT = { has_province_flag = gt_player_capital } #GT
 				}
 				if = {
 					limit = { NOT = { is_core = REB } }
@@ -273,7 +273,7 @@ nationalist_rebels = {
 					culture = REB
 					NOT = { is_core = REB }
 					culture = REB
-					NOT = { has_province_flag = gt_player_capital }
+					NOT = { has_province_flag = gt_player_capital } #GT
 				}
 				add_core = REB
 			}

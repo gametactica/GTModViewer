@@ -1,0 +1,20 @@
+edict_coastal_edict = {
+	potential = {
+		any_state = { has_port = yes }
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_sailors_modifier = 0.25
+	}
+	
+	color = {  214 105 71  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -32,6 +32,7 @@ country_event = {
 					is_neighbor_of = ROOT
 					NOT = { is_in_war = { attacker_leader = ARA } }
 					NOT = { is_in_war = { defender_leader = ARA } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
 				}
 				num_of_cities = 25
 			}
@@ -48,6 +49,7 @@ country_event = {
 					is_neighbor_of = ROOT
 					NOT = { is_in_war = { attacker_leader = CAS } }
 					NOT = { is_in_war = { defender_leader = CAS } }
+					NOT = { is_in_war = { casus_belli = cb_independence_war } }
 				}
 				num_of_cities = 16
 			}
@@ -312,7 +314,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_global_flag = columbus_happened }
-		has_idea = GT_explore1
+		has_idea = GT_explore1 #GT
 		OR = {
 			NOT = {
 				north_america = {
@@ -349,7 +351,7 @@ country_event = {
 			limit = {
 				NOT = { has_country_flag = turned_down_columbus }
 				religion = catholic
-				has_idea = GT_explore1
+				has_idea = GT_explore1 #GT
 			}
 			country_event = { id = flavor_spa.1 }
 		}
@@ -1655,13 +1657,16 @@ country_event = {
 			name = "valladolid_sepulveda_motherland"
 			duration = 3650
 		}
-		every_subject_country = {
-			limit = {
-				is_colonial_nation_of = ROOT
-			}
-			add_country_modifier = {
-				name = "valladolid_sepulveda"
-				duration = 3650
+		custom_tooltip = flavor_spa.2.a.tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+				}
+				add_country_modifier = {
+					name = "valladolid_sepulveda"
+					duration = 3650
+				}
 			}
 		}
 	}
@@ -2559,6 +2564,7 @@ country_event = {
 					}
 				}
 			}
+			dynasty = "von Habsburg"
 		}
 		ruler_age = 20
 		NOT = { is_rival = HAB }
@@ -2632,32 +2638,36 @@ country_event = {
 		}
 		custom_tooltip = flavor_spa.15.tt
 		hidden_effect = {
+			low_countries_region = {
+				limit = {
+					owner = {
+						OR = {
+							tag = HAB
+							is_subject_of = HAB
+						}
+						ai = yes
+					}
+				}
+				add_core = ROOT
+				remove_core = HAB
+				cede_province = ROOT
+			}
+			picardy_area = {
+				limit = {
+					owner = {
+						OR = {
+							tag = HAB
+							is_subject_of = HAB
+						}
+						ai = yes
+					}
+				}
+				add_core = ROOT
+				remove_core = HAB
+				cede_province = ROOT
+			}
 			HAB = {
 				country_event = { id = flavor_spa.14 }
-				every_owned_province = {
-					limit = {
-						OR = {
-							region = low_countries_region
-							area = picardy_area
-						}
-					}
-					add_core = ROOT
-					remove_core = HAB
-					cede_province = ROOT
-				}
-				every_subject_country = {
-					every_owned_province = {
-						limit = {
-							OR = {
-								region = low_countries_region
-								area = picardy_area
-							}
-						}
-						add_core = ROOT
-						remove_core = HAB
-						cede_province = ROOT
-					}
-				}
 			}
 		}
 	}

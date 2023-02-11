@@ -99,7 +99,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_idea = GT_relig1
+				has_idea = GT_relig3 #GT
 			}
 			modifier = {
 				factor = 0
@@ -177,7 +177,7 @@ country_decisions = {
 			set_global_flag = retrial_of_joan_of_arc
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 	}
 }

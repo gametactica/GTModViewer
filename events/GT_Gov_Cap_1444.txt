@@ -1,0 +1,32 @@
+namespace = GT_Gov_Cap_1444
+
+country_event =
+{
+    id = GT_Gov_Cap_1444.1
+    title = GT_Gov_Cap_1444.1.t
+    desc = GT_Gov_Cap_1444.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+      ai = no
+    }
+
+    immediate =
+    {
+		add_country_modifier = { 
+			name = GT_1444_GC_FIX
+			duration = -1
+			desc = GT_1444_GC_FIX_TOOLTIP
+			#hidden = yes
+			}
+    }
+
+    option = {
+      add_prestige = 1
+    }
+}

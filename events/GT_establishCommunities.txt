@@ -1,0 +1,23 @@
+namespace = GT_establishCommunities
+
+country_event =
+{
+    id = GT_establishCommunities.1
+    title = GT_establishCommunities.t
+    desc = GT_establishCommunities.d
+    picture = TRADEGOODS_eventPicture
+
+    hidden = yes
+
+    mean_time_to_happen = {months = 60} 
+
+    trigger =
+    {
+        #Cannot find trade policy trigger, yet.
+    }
+
+    option =
+    {
+        #Need to find a viable trigger before this is planned
+    }
+}
