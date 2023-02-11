@@ -1,0 +1,35 @@
+namespace = GT_SuccessionHRE
+
+country_event =
+{
+    id = GT_SuccessionHRE.1
+    title = GT_SuccessionHRE.1.t
+    desc = GT_SuccessionHRE.1.d
+    picture = CIVIL_WAR_eventPicture
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        government = monarchy
+		is_emperor = yes
+    }
+	
+	hidden = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {	
+				country_event = {
+					id = GT_Scoring.1 
+					}
+				}
+			}
+		}
+		
+	option =
+    {
+        name = GT_SuccessionHRE.1.a
+    }
+
+}

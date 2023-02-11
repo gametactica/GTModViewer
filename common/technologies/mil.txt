@@ -5,6 +5,8 @@ monarch_power = MIL
 # ahead_of_time = {
 # }
 
+#GT - No changes made thus far (11-13-2022)
+
 # Pre-era techs
 technology = {
 	# Tech 0

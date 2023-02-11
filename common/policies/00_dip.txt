@@ -109,7 +109,8 @@ the_importation_act = {
 		
 	}
 	
-	trade_efficiency = 0.20
+	trade_efficiency = 0.1
+	transfer_trade_power_reasons = 5 #GT
 	
 	ai_will_do = {
 		factor = 1.2
@@ -150,8 +151,8 @@ colonial_expansions = {
 		full_idea_group = exploration_ideas
 	}		
 
-	global_colonial_growth = 20
-	native_uprising_chance = -0.5
+	global_colonial_growth = 15
+	native_uprising_chance = -0.25
 	
 	ai_will_do = {
 		factor = 1
@@ -180,7 +181,7 @@ beneficial_neglect = {
 		full_idea_group = innovativeness_ideas
 	}
 
-	missionaries = 1
+	missionaries = 1 #GT
 
 
 	ai_will_do = {
@@ -622,7 +623,7 @@ commercial_embassies = {
 	}
 }
 
-mandatory_service = {
+mandatory_service = { #GT
 	monarch_power = DIP
 	potential = {
 		has_idea_group = diplomatic_ideas
@@ -635,10 +636,10 @@ mandatory_service = {
 	}
 	
 	reelection_cost = -0.10
-	legitimacy = 1.0
-	devotion = 1.0
-	horde_unity = 1.0
-	meritocracy = 0.5
+	legitimacy = 0.33
+	devotion = 0.33
+	horde_unity = 0.33
+	meritocracy = 0.33
 	may_recruit_female_generals = yes
 	female_advisor_chance = 0.25
 

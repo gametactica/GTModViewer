@@ -17,5 +17,6 @@ country_event =
     option =
     {
         name = GT_Scoring.1.a
+        add_prestige = 1
     }
 }

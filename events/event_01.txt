@@ -58,7 +58,7 @@ country_event =
                 }
             }
         }
-
+        add_prestige = 1
     }
 
 }

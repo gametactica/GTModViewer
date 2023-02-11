@@ -3,9 +3,9 @@
  designate_the_staple_port_desc:0 "In order to effectively tax things we need to regulate them. If we were to designate Calais as the sole point of import for the wool staple we would improve our tax revenues dramatically. "
  pol_commonwealth_title:0 "Form Polish-Lithuanian Commonwealth"
  pol_commonwealth_desc:0 "Replace the personal union between Poland and Lithuania with a real union, welding the two countries together into one powerful state, capable of withstanding our enemies."
- lit_commonwealth_title:0 "Form Polish-Lithuanian Commonwealth"
+ lit_commonwealth_title:1 "Form Lithuanian-Polish Commonwealth"
  lit_commonwealth_desc:0 "Replace the personal union between Poland and Lithuania with a real union, welding the two countries together into one powerful state, capable of withstanding our enemies."
- commonwealth_enforced_title:0 "Enforce Polish-Lithuanian Commonwealth"
+ commonwealth_enforced_title:1 "Enforce a Commonwealth"
  commonwealth_enforced_desc:0 "Poland and Lithuania has a common history of close cooperation and through the Union of Vilnius and Radom our respective aristocracies where integrated with one another in 1413. While fate has since then brought us apart our interests remain closely aligned and now that we control both the core of the Lithuanian and Polish lands it is perhaps time we let our old friends become stakeholders in a joint state."
  shan_nation_title:0 "Confederate the Shan States"
  shan_nation_desc:0 "Alone, the various disparate Shan states are weak and vulnerable. Together, they could be a serious power in South-East Asia."
@@ -75,7 +75,7 @@
  icelandic_nation_desc:0 "Circumstances have conspired to make our Icelandic holdings the foremost part of our country. Let us embrace this new identity as an Icelandic country and strengthen the local institutions, entrenching our own rule over the island."
  global_flag_western_focus_not_set_tooltip:0 "No other country has taken the decision §YWestern Focus§!."
  reestablishing_themes_names_tooltip:0 "Greek naming will be restored to many of our Turkish provinces."
- roman_culture_provinces_tooltip:0 "All Primary Culture provinces will now have §YRoman§! Culture."
+ roman_culture_provinces_tooltip:1 "All provinces of the [Root.Culture.GetGroupName] Culture Group will now have §YRoman§! Culture."
  no_more_celestial_empire_title:0 "Government Reform"
  no_more_celestial_empire_desc:0 "Having strengthened our government institutions sufficiently we can break the power of our court factions and ensure the direct control of our $MONARCHTITLE$."
  native_american_reform_title:0 "Reform Society"
@@ -209,3 +209,7 @@
  GT_ProtectedArea_decision_title:0 "Seize Capital Lands"
  GT_ProtectedArea_decision_desc:0 "Your previous loyal subjects have notified you that, at your command, they will defect back to your banner."
  GT_ProtectedArea_tooltip:0 "Has lost capital area land."
+ #GT
+ form_crusader_state_of_antioch_title:0 "Reastablish Principality of Antioch"
+ #GT
+ form_crusader_state_of_antioch_desc:0 "The Papacy is eager to help us reorganize our nation into the Crusader State of Antioch to further legitimize our conquests."

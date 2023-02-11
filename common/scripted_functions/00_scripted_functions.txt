@@ -46,8 +46,8 @@ can_claim_defender_of_faith = {
 can_change_national_focus = {
 }
 
-can_increase_stability = {
-    condition = {
+can_increase_stability = { #GT
+	condition = {
         tooltip = "CANNOT_INCREASE_STABILITY"
         potential = {
         }
@@ -56,7 +56,7 @@ can_increase_stability = {
 				NOT = {stability = -2}
 				has_any_disaster = yes
 				ruler_has_personality = calm_personality
-				innovativeness = 90
+				innovativeness = 80
 				AND = {
 					uses_church_aspects = yes
 					OR = {
@@ -70,7 +70,7 @@ can_increase_stability = {
 					}
 				AND = {
 					uses_blessings = yes
-					num_of_active_blessings = 2
+					num_of_active_blessings = 3
 					}
 				AND = {
 					uses_karma = yes
@@ -130,10 +130,13 @@ can_add_province_to_hre = {
 	
 }
 
+#ROOT = province, FROM = country
 can_remove_province_from_hre = {
 	condition = {
 		potential = {
-			ai = yes
+			owner = {
+				ai = yes
+			}
 		}
 		allow = {
 			owner = {

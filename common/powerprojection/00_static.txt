@@ -10,35 +10,35 @@
 # NOTE! Extra great_power_x modifiers can be added here as long as x <= NUM_OF_GREAT_POWERS in NDefines::NDiplomacy
 # The one for which x = NUM_OF_GREAT_POWERS will also be applied to all Great Powers that have recently left the top.
 
-great_power_1 = {
+great_power_1 = { #GT
 	power = 40
 }
 
-great_power_2 = {
+great_power_2 = { #GT
 	power = 35
 }
 
-great_power_3 = {
+great_power_3 = { #GT
 	power = 30
 }
 
-great_power_4 = {
+great_power_4 = { #GT
 	power = 25
 }
 
-great_power_5 = {
+great_power_5 = { #GT
 	power = 20
 }
 
-great_power_6 = {
+great_power_6 = { #GT
 	power = 15
 }
 
-great_power_7 = {
+great_power_7 = { #GT
 	power = 10
 }
 
-great_power_8 = {
+great_power_8 = { #GT
 	power = 5
 }
 
@@ -62,21 +62,21 @@ supporting_rebels_in_rival = {
 	max = 50
 }
 
-warned_rival = {
+warned_rival = { #GT
 	power = 3
 }
 
-guarantee_neighbour_of_rival = {
+guarantee_neighbour_of_rival = { #GT
 	power = 5
 }
 
-current_age_power_projection = {
+current_age_power_projection = { #GT
 	power = 2
 	max = 10
 }
 
-is_hegemon = {
-	power = 25
+is_hegemon = { #GT
+	power = 15
 }
 
 allied_to_hegemon = {
@@ -87,7 +87,7 @@ allied_to_hegemon = {
 ##################################
 # DYNAMIC, ADDED AND THEN DECAYED
 ##################################
-last_age_power_projection = {
+last_age_power_projection = { #GT
 	power = 1
 	yearly_decay = 1
 	max = 5
@@ -148,16 +148,16 @@ forced_rival_into_union = {
 	max = 100
 }
 
-took_province_from_rival = {
-	power = 0.5		# multiplied with basetax
+took_province_from_rival = { #GT
+	power = 0.05		# multiplied with basetax
 	yearly_decay = 1
-	max = 100
+	max = 10
 }
 
-lost_province_to_rival = {
-	power = -0.5			# multiplied with basetax
+lost_province_to_rival = { #GT
+	power = -0.05			# multiplied with basetax
 	yearly_decay = 1
-	min = -100
+	min = -10
 }
 
 capital_state_pillaged_by_rival = {
@@ -172,10 +172,10 @@ pillaged_rival_capital_state = {
 	min = -100
 }
 
-rival_lost_province = {
-	power = 0.5			# multiplied with basetax
+rival_lost_province = { #GT
+	power = 0.05			# multiplied with basetax
 	yearly_decay = 1
-	max = 100
+	max = 10
 }
 
 spread_revolution_to_enemy = {
@@ -192,6 +192,12 @@ spread_revolution_to_us = {
 
 #Use this one when adding power projection when via add_power_projection, unless you have a specific reason to use another
 mission_rewards_power_projection = {
+	max = 100
+	power = 1
+	yearly_decay = 1
+}
+
+high_sea_power_projection = {
 	max = 100
 	power = 1
 	yearly_decay = 1
@@ -216,6 +222,22 @@ has_rival = {
 ##################################
 
 zim_african_great_power = {
+	max = 25
 	min = 25
 	power = 1
+	decay = no
+}
+
+sca_lion_of_the_north = {
+	max = 25
+	min = 25
+	power = 1
+	decay = no
+}
+
+25_permanent_power_projection = {
+	max = 25
+	min = 25
+	power = 1
+	decay = no
 }

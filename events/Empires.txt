@@ -363,7 +363,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			has_idea = GT_expand5
+			has_idea =  GT_explore5 #GT
 		}
 		modifier = {
 			factor = 0.9

@@ -1,0 +1,20 @@
+edict_infrastructure_edict = {
+	potential = {
+		always = yes		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_friendly_movement_speed = 0.25
+	}
+	
+	color = {  76 14 155  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

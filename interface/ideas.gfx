@@ -211,7 +211,7 @@ spriteTypes = {
 		
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
-	
+
 	spriteType = {
 		name = "GFX_idea_GT_pirate0"
 		texturefile = "gfx//interface//ideas//idea_GT_Pirate0.dds"

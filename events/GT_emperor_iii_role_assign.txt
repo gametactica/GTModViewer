@@ -1,0 +1,85 @@
+namespace = GT_emperor_iii_role_assign
+
+country_event =
+{
+    id = GT_emperor_iii_role_assign.1
+    title = GT_emperor_iii_role_assign.1.t
+    desc = GT_emperor_iii_role_assign.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        OR = {
+            TAG = ENG
+            TAG = DAN
+            TAG = SWE
+            TAG = NOR
+            TAG = SCO
+            TAG = BOH
+            TAG = NRM
+            TAG = KOL
+            TAG = MAI
+            TAG = LIE
+            TAG = BAM
+            TAG = TRY
+            TAG = MAG
+            TAG = LIV
+            TAG = NOV
+            TAG = DNZ
+            TAG = EFR
+            TAG = FLA
+            TAG = GOT
+            TAG = HAM
+            TAG = GLG
+        }
+    }
+
+    option =
+    { name = GT_emperor_iii_role_assign.a
+        if = {
+            limit = {
+                OR = {
+                    TAG = ENG
+                    TAG = DAN
+                    TAG = SWE
+                    TAG = NOR
+                    TAG = SCO
+                    TAG = BOH
+                    TAG = NRM
+                }
+            }
+            set_country_flag = gt_despot_iii   
+        }
+        if = {
+            limit = {
+                OR = {
+                    TAG = NOV
+                    TAG = DNZ
+                    TAG = EFR
+                    TAG = FLA
+                    TAG = GOT
+                    TAG = HAM
+                    TAG = GLG
+                }
+            }
+            set_country_flag = gt_trader_iii
+        }
+        if = {
+            limit = {
+                OR = {
+                    TAG = KOL
+                    TAG = MAI
+                    TAG = LIE
+                    TAG = BAM
+                    TAG = TRY
+                    TAG = MAG
+                    TAG = LIV
+                }
+            }
+            set_country_flag = gt_bishop_iii
+        }
+    }

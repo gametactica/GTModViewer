@@ -235,7 +235,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.9
-			owner = { has_idea = GT_relig7 }
+			owner = { has_idea = GT_relig7 } #GT
 		}
 		modifier = {
 			factor = 1.4
@@ -280,7 +280,7 @@ country_event = {
 		months = 700
 		modifier = {
 			factor = 0.8
-			has_idea = GT_trade3
+			has_idea = GT_trade3 #GT
 		}
 		modifier = {
 			factor = 0.8
@@ -296,7 +296,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			has_idea = GT_naval1
+			has_idea = GT_marit4 #GT
 		}
 		modifier = {
 			factor = 0.9
@@ -568,7 +568,7 @@ country_event = {
 		months = 400
 		modifier = {
 			factor = 0.6
-			has_idea = GT_innov2
+			has_idea = GT_innov1 #GT
 		}
 	}
 	
@@ -736,7 +736,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			has_idea = GT_innov2
+			has_idea = GT_innov1 #GT
 		}
 	}
 	
@@ -1053,7 +1053,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-			has_idea = GT_innov2
+			has_idea = GT_innov1 #GT
 		}
 	}
 	

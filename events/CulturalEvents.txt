@@ -249,7 +249,7 @@ country_event = {
 		NOT = {
 			has_country_flag = guild_of_st_luke
 		}
-		has_idea = GT_innov2
+		has_idea = GT_innov1 #GT
 		years_of_income = 0.2
 		adm_power = 10
 	}
@@ -294,7 +294,7 @@ country_event = {
 			has_country_flag = dutch_masters
 		}
 		current_age = age_of_absolutism
-		has_idea = GT_innov2
+		has_idea = GT_innov1 #GT
 		years_of_income = 0.6
 		adm_power = 10
 	}

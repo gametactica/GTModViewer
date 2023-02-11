@@ -12,6 +12,7 @@ country_event =
     trigger =
     {
         government = monarchy
+		NOT = { has_reform = states_general_reform }
 		NOT = { has_reform = steppe_horde }
 		NOT = { tag = MAM }
 		NOT = { is_emperor_of_china = yes }

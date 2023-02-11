@@ -24,6 +24,11 @@ country_event =
         clr_country_flag = gt_was_player
         set_country_flag = gt_was_player
         
+        add_country_modifier = { 
+			name = GT_1444_GC_FIX
+			duration = -1
+            }
+        
     }
     
 }

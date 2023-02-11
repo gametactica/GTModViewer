@@ -15,15 +15,16 @@ country_event =
 		is_emperor_of_china = yes
     }
 	
-	immediate = {
-		hidden_effect = {
-			every_country = {	
-				country_event = {
-					id = GT_Scoring.1 
-					}
-				}
-			}
-		}
+	# Uncomment for MoH campaign
+	# immediate = {
+	#	hidden_effect = {
+	#		every_country = {	
+	#			country_event = {
+	#				id = GT_Scoring.1 
+	#				}
+	#			}
+	#		}
+	#	}
 		
 	option = {
 		name = "GT_SuccessionMng.1.a"

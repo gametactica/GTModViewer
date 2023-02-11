@@ -1,0 +1,51 @@
+namespace = GT_Crownlands_1444
+
+country_event = {
+
+    id = GT_Crownlands_1444.1
+    title = GT_Crownlands_1444.1.t
+    desc = GT_Crownlands_1444.1.d
+    picture = ANGLICAN_SERMON_eventPicture
+
+    hidden = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { is_year = 1445 }
+        ROOT = {
+            crown_land_share = 100 #Campaign playable released subjects
+        }
+    }
+
+    immediate = {
+
+		change_estate_land_share = {
+            estate = estate_church
+            share = 15
+        }
+
+        change_estate_land_share = {
+            estate = estate_burghers
+            share = 10
+        }
+
+        change_estate_land_share = {
+            estate = estate_nobles
+            share = 25
+        }
+
+        capital_scope = {
+            infantry = ROOT
+            infantry = ROOT
+            infantry = ROOT
+            cavalry = ROOT
+        }
+    }
+
+    
+    option = {
+        name = GT_Crownlands_1444.a
+        add_prestige = 1
+    }
+}

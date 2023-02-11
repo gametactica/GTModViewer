@@ -350,19 +350,19 @@ province_event = {
 		months	= 2000
 		modifier = {
 			factor = 0.9
-			owner = { has_idea = GT_trade4 }
+			owner = { has_idea = GT_trade4 } #GT
 		}
 		modifier = {
 			factor = 0.9
-			owner = { has_idea = GT_trade3 }
+			owner = { has_idea = GT_trade3 } #GT
 		}
 		modifier = {
 			factor = 1.1
-			owner = { NOT = { has_idea = GT_trade4 } }
+			owner = { NOT = { has_idea = GT_trade4 } } #GT
 		}
 		modifier = {
 			factor = 1.1
-			owner = { NOT = { has_idea = GT_trade3 } }
+			owner = { NOT = { has_idea = GT_trade3 } } #GT
 		}
 		modifier = {
 			factor = 0.95

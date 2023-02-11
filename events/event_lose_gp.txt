@@ -5,7 +5,7 @@ country_event =
     id = event_lose_gp.1
     title = event_lose_gp.1.t
     desc = event_lose_gp.1.d
-    picture = ANGLICAN_SERMON_eventPicture
+    picture = MILITARY_CAMP_eventPicture
 
     is_triggered_only = yes
 
@@ -17,6 +17,7 @@ country_event =
     option =
     {
         name = event_lose_gp.1.a
+        add_prestige = -10
     }
     
 }

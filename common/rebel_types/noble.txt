@@ -150,7 +150,7 @@ noble_rebels = {
 		NOT = { local_autonomy = 50 }
 	}
 	siege_won_effect = {
-		add_local_autonomy = 10
+		add_local_autonomy = 5 #GT
 		owner = {
 			if = {
 				limit = { has_estate = estate_nobles }
@@ -229,11 +229,11 @@ noble_rebels = {
 			limit = {
 				has_rebel_faction = REB
 			}
-			add_local_autonomy = 2
+			add_local_autonomy = 10 #GT
 		}	
-		add_prestige = -2
-		add_legitimacy = -2
-		add_horde_unity = -2
+		add_prestige = -20
+		add_legitimacy = -20
+		add_horde_unity = -20
 		if = {
 			limit = { has_disaster = counts_feud }
 			end_disaster = counts_feud

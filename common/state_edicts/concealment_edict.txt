@@ -1,0 +1,20 @@
+edict_concealment_edict = {
+	potential = {
+		always = yes		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_attacker_dice_roll_bonus = 1
+	}
+	
+	color = {  114 55 46  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+religion = catholic
+technology_group = western
+unit_type = western
+capital = 2313
+fixed_capital = 2313
+
+1444.1.1 = {
+	monarch = {
+	name = "Bohemond Hauteville"
+	adm = 4
+	dip = 2
+	mil = 5
+	birth_date = 1424.11.11
+	religion = orthodox
+	culture = armenian
+	regent = no
+	}
+}

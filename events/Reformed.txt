@@ -75,7 +75,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			has_idea = GT_human1
+			has_idea = GT_human7 #GT
 		}
 		modifier = {
 			factor = 0.95

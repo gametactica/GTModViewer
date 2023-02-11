@@ -1,14 +1,30 @@
-edict_religious_unity = {
+edict_religious_unity = { #GT
 	potential = {
-		always = yes		#we support "potential" if modders want to have lots and just show some.
+		NOT = { 
+			culture_group = iberian
+		}
+		NOT = {
+			primary_culture = andalucian
+		}
+		OR = {
+			religion_group = muslim
+			religion = catholic
+		}
 	}
 	
 	allow = {
-		always = yes
+		OR = {
+			has_idea = GT_relig6
+			ruler_has_personality = pious_personality
+			ruler_has_personality = zealot_personality
+			ruler_has_personality = righteous_personality
+			ruler_has_personality = architectural_visionary_personality
+			any_state = { has_state_edict = edict_religious_unity }
+		}
 	}
 	
 	modifier = {
-		local_missionary_strength = 0.01
+		local_warscore_cost_modifier = 0.1 #GT
 	}
 	
 	color = { 117 38 143 }

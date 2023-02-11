@@ -20,7 +20,7 @@ country_event =
 		trigger = {
 			OR = {
 			ruler_has_personality = just_personality
-			ruler_has_personality = righteous_personality
+			ruler_has_personality = benevolent_personality
 			ruler_has_personality = strict_personality
 			ruler_has_personality = kind_hearted_personality
 			ruler_has_personality = incorruptible_personality
@@ -61,12 +61,15 @@ country_event =
 			ruler_has_personality = navigator_personality
 			ruler_has_personality = fierce_negotiator_personality
 			ruler_has_personality = babbling_buffoon_personality
-			ruler_has_personality = ruler_has_personality = infertile_personality
+			ruler_has_personality = infertile_personality
 			ruler_has_personality = naive_personality
 			ruler_has_personality = loose_lips_personality
 			ruler_has_personality = obsessive_perfectionist_personality
 			ruler_has_personality = humane_personality
 			ruler_has_personality = petty_personality
+			ruler_has_personality = righteous_personality
+			ruler_has_personality = immortal_personality
+			ruler_has_personality = reformist_personality
 			}
 		}
 			add_stability = 0

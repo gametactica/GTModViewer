@@ -66,7 +66,7 @@ leadered_peasant_rebels = {
  		NOT = { local_autonomy = 50 }
  	}
 	siege_won_effect = {
-		add_local_autonomy = 10	
+		add_local_autonomy = 5 #GT
 	}
 	
 	# Country scope
@@ -96,7 +96,7 @@ leadered_peasant_rebels = {
 				has_rebel_faction = REB
 				is_overseas = no
 			}
-			add_local_autonomy = 5
+			add_local_autonomy = 15 #GT
 		}
 		if = {
 			limit = { has_disaster = peasant_war }
@@ -113,8 +113,8 @@ leadered_peasant_rebels = {
 			remove_country_modifier = support_troops
 			remove_country_modifier = obsolete_forces
 			remove_country_modifier = isolate_rebels
-			add_prestige = -10
+			add_prestige = -50
 		}
-		add_prestige = -10
+		add_prestige = -50
 	}
 }

@@ -164,7 +164,7 @@ province_event = {
 	}
 
 	option = {
-		trigger = { owner = { has_idea = GT_espio2 } }
+		trigger = { owner = { has_idea = GT_espio6 } } #GT
 		name = "tyw_events.5.b"
 		owner = { add_dip_power = -25 }
 	}
@@ -257,6 +257,7 @@ country_event = {
 		NOT = { 
 			OR = {
 				has_reform = elective_monarchy
+				has_reform = polish_elective_monarchy
 				has_reform = steppe_horde
 			}
 		}
@@ -822,6 +823,7 @@ country_event = {
 	title = "tyw_events.19.t"
 	desc = "tyw_events.19.d"
 	picture = SOLDIERS_FREEZING_eventPicture
+	goto = siege_province
 
 	trigger = {
 		has_dlc = "Art of War"
@@ -837,10 +839,34 @@ country_event = {
 				}
 			}
 		}
+		OR = {
+			is_month = 10
+			AND = {
+				is_month = 0
+				NOT = { is_month = 3 }
+			}
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 600
+	}
+	
+	immediate = {
+		hidden_effect = {			
+			random_province = {
+				limit = {
+					sieged_by = ROOT
+					fort_level = 1
+					NOT = { owned_by = ROOT }
+					OR = {
+						has_winter = normal_winter
+						has_winter = severe_winter
+					}
+				}
+				save_event_target_as = siege_province
+			}
+		}
 	}
 
 	option = {
@@ -850,16 +876,7 @@ country_event = {
 	option = {
 		name = "tyw_events.19.b"
 		add_prestige = -5
-		random_province = {
-			limit = {
-				sieged_by = ROOT
-				fort_level = 1
-				NOT = { owned_by = ROOT }
-				OR = {
-					has_winter = normal_winter
-					has_winter = severe_winter
-				}
-			}
+		event_target:siege_province = {
 			change_siege = -2
 		}
 	}

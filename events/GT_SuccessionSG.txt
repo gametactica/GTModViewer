@@ -1,0 +1,33 @@
+namespace = GT_SuccessionSG
+
+country_event =
+{
+    id = GT_SuccessionSG.1
+    title = GT_SuccessionSG.1.t
+    desc = GT_SuccessionSG.1.d
+    picture = DEATH_OF_HEIR_eventPicture #find election pic
+
+    is_triggered_only = yes
+
+    trigger =
+    {
+        government = monarchy
+		has_reform = states_general_reform
+    }
+	
+	option = {
+		name = "GT_SuccessionSG.1.a"
+		trigger = {
+			is_statists_in_power = yes
+			}
+			add_stability = 1
+		}
+	
+	option = {
+		name = "GT_SuccessionSG.1.b"
+		trigger = {
+			is_statists_in_power = no
+			}
+			add_stability = -1
+		}
+	}

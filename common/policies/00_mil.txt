@@ -941,7 +941,7 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	possible_condottieri = 5
+	possible_condottieri = 0.33
 	yearly_army_professionalism = 0.005
 
 	ai_will_do = {

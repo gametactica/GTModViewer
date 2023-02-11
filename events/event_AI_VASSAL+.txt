@@ -13,9 +13,17 @@ country_event =
 
     trigger =
     {
-        vassal = 3
-        ai = yes
-		NOT = {has_country_flag = gt_was_player}
+      OR = {
+        AND = {
+          ai = yes
+          is_great_power = yes
+        }
+        AND = {
+          vassal = 3
+          ai = yes
+        }
+      }
+		  NOT = {has_country_flag = gt_was_player}
     }
 
     option =
